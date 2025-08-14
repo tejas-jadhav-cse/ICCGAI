@@ -3,101 +3,300 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>International Conference — Computational Intelligence & Generative AI (IC‑CIGAI 2025)</title>
-  <meta name="description" content="A premium, industry‑grade website for the International Conference on Computational Intelligence & Generative AI (IC‑CIGAI 2025)." />
-  <meta property="og:title" content="IC‑CIGAI 2025 — Computational Intelligence & Generative AI" />
-  <meta property="og:description" content="Join researchers, engineers, and creators at Sandip University, Nashik. Keynotes, papers, demos, and more." />
+  <title>IC-CIGAI 2025 | International Conference on Computational Intelligence & Generative AI</title>
+  <meta name="description" content="Join leading researchers and industry experts at the International Conference on Computational Intelligence & Generative AI, September 13, 2025 at Sandip University, Nashik." />
+  <meta property="og:title" content="IC-CIGAI 2025 | International Conference on Computational Intelligence & Generative AI" />
+  <meta property="og:description" content="Leading academic conference bringing together researchers, industry experts, and innovators in AI, machine learning, and computational intelligence." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0f172a" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ---------- CSS RESET (modern) ---------- */
-    *,*::before,*::after{box-sizing:border-box}
-    *{margin:0}
-    html:focus-within{scroll-behavior:smooth}
-    img,svg,video,canvas,audio,iframe,embed,object{display:block;max-width:100%}
-    input,button,textarea,select{font:inherit}
-    :root{
-      --bg: #0b0f1a;         /* deep night */
-      --bg-2:#0d1324;        /* slightly lighter */
-      --card:#0f172a;        /* slate-900 */
-      --elev:#111827cc;      /* translucent layer */
-      --text:#e5e7eb;        /* gray-200 */
-      --muted:#94a3b8;       /* slate-400 */
-      --brand:#7c3aed;       /* violet-600 */
-      --brand-2:#22d3ee;     /* cyan-400 */
-      --accent:#f59e0b;      /* amber-500 */
-      --ok:#10b981;          /* emerald */
-      --warn:#f59e0b;        /* amber */
-      --danger:#ef4444;      /* red */
-      --radius:clamp(16px, 2vw, 24px);
-      --radius-lg:clamp(20px, 3vw, 32px);
-      --shadow-lg: 0 10px 30px rgba(0,0,0,.35);
-      --shadow-xl: 0 20px 60px rgba(0,0,0,.5);
-      --grid-max:1200px;
-      --pad:clamp(16px, 2vw, 28px);
-      --space-1: clamp(8px, 1vw, 12px);
-      --space-2: clamp(12px, 1.5vw, 18px);
-      --space-3: clamp(18px, 2.2vw, 28px);
-      --space-4: clamp(28px, 3vw, 40px);
-      --space-5: clamp(40px, 4.5vw, 64px);
-      --space-6: clamp(56px, 6vw, 96px);
-      --blur: clamp(12px, 2vw, 20px);
-      --line: 1px solid rgba(148,163,184,.15);
-      --line-hover: 1px solid rgba(148,163,184,.35);
-      --grid-gap: clamp(16px,2.5vw,24px);
-      --text-gradient: linear-gradient(135deg, var(--text), var(--muted));
-      --brand-gradient: linear-gradient(135deg, var(--brand), var(--brand-2));
-      --glass-bg: rgba(255,255,255,.03);
-      --glass-border: rgba(255,255,255,.08);
-    }
-    html,body{height:100%}
-    body{
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-      color:var(--text);
-      background:
-        radial-gradient(1200px 600px at 10% -10%, rgba(124,58,237,.18), transparent 60%),
-        radial-gradient(900px 500px at 110% 10%, rgba(34,211,238,.18), transparent 50%),
-        linear-gradient(180deg, var(--bg), var(--bg-2));
-      background-attachment: fixed;
+    /* CSS Reset */
+    *, *::before, *::after { box-sizing: border-box; }
+    * { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img, svg, video, canvas, audio, iframe, embed, object { display: block; max-width: 100%; }
+    input, button, textarea, select { font: inherit; }
+
+    /* CSS Variables */
+    :root {
+      /* Professional Color Palette */
+      --primary: #1e40af;           /* Professional blue */
+      --primary-light: #3b82f6;    /* Lighter blue */
+      --secondary: #0f172a;        /* Deep navy */
+      --accent: #06b6d4;           /* Cyan accent */
+      --surface: #ffffff;          /* White surface */
+      --surface-alt: #f8fafc;     /* Light gray */
+      --text: #0f172a;            /* Dark text */
+      --text-muted: #64748b;      /* Muted text */
+      --border: #e2e8f0;          /* Light border */
+      --border-hover: #cbd5e1;    /* Darker border on hover */
+      
+      /* Dark mode alternatives */
+      --dark-bg: #0f172a;
+      --dark-surface: #1e293b;
+      --dark-text: #f1f5f9;
+      --dark-text-muted: #94a3b8;
+      --dark-border: #334155;
+      
+      /* Typography */
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      
+      /* Spacing */
+      --container-max: 1200px;
+      --radius: 8px;
+      --radius-lg: 12px;
+      --padding: clamp(16px, 4vw, 24px);
+      --gap: clamp(16px, 3vw, 24px);
+      
+      /* Elevation */
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      
+      /* Transitions */
+      --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* ---------- Layout ---------- */
-    .container{width:min(100% - 2*var(--pad), var(--grid-max)); margin-inline:auto}
-    
-    /* ---------- Enhanced Navigation ---------- */
-    header.nav{
-      position:sticky; top:0; z-index:100; 
-      backdrop-filter:saturate(140%) blur(16px);
-      background: linear-gradient(180deg, rgba(11,15,26,.92), rgba(11,15,26,.75));
-      border-bottom: var(--line);
+    /* Dark mode preference */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --surface: var(--dark-bg);
+        --surface-alt: var(--dark-surface);
+        --text: var(--dark-text);
+        --text-muted: var(--dark-text-muted);
+        --border: var(--dark-border);
+        --border-hover: var(--text-muted);
+      }
     }
+
+    /* Base Styles */
+    html, body { height: 100%; }
     
-    .nav.scrolled{
-      backdrop-filter:saturate(160%) blur(20px);
-      background: linear-gradient(180deg, rgba(11,15,26,.95), rgba(11,15,26,.85));
-      box-shadow: 0 8px 32px rgba(0,0,0,.2);
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--surface);
+      overflow-x: hidden;
     }
-    
-    .nav-inner{
-      display:flex; align-items:center; gap:16px; 
-      padding:clamp(8px, 1.5vw, 16px) var(--pad);
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.5em;
     }
+
+    h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+    h2 { font-size: clamp(2rem, 4vw, 2.5rem); }
+    h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
+    h4 { font-size: clamp(1.125rem, 2.5vw, 1.25rem); }
+
+    p { margin-bottom: 1em; }
     
-    .logo{
-      display:flex; align-items:center; gap:12px; 
-      font-weight:800; letter-spacing:.3px;
+    /* Layout */
+    .container {
+      width: min(100% - 2 * var(--padding), var(--container-max));
+      margin-inline: auto;
     }
-    
-    .logo-badge{
-      width:clamp(32px, 4vw, 40px); height:clamp(32px, 4vw, 40px); 
-      border-radius:clamp(10px, 1.5vw, 14px); 
-      display:grid; place-items:center;
-      background: radial-gradient(120% 160% at 20% 20%, var(--brand), transparent),
-                  radial-gradient(120% 160% at 80% 80%, var(--brand-2), transparent);
-      box-shadow: inset 0 0 8px rgba(255,255,255,.12), var(--shadow-lg);
+
+    .grid {
+      display: grid;
+      gap: var(--gap);
+    }
+
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    /* Navigation */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .nav.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .nav { background: var(--dark-bg); }
+      .nav.scrolled { background: rgba(15, 23, 42, 0.95); }
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem var(--padding);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .logo-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius);
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-menu a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a:focus::after {
+      width: 100%;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a:focus {
+      color: var(--primary);
+      outline: none;
+    }
+
+    /* Mobile Navigation */
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .mobile-toggle span {
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+    .mobile-toggle.active span:nth-child(2) { opacity: 0; }
+    .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition-slow);
+    }
+
+    .mobile-nav.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-nav-content {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      max-width: 90vw;
+      width: 400px;
+      position: relative;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .close-nav-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--surface-alt);
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .close-nav-btn:hover {
+      background: var(--border);
+    }
+
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .mobile-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius);
+      transition: var(--transition);
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a:focus {
+      background: var(--surface-alt);
+      color: var(--primary);
     }
     
     /* Desktop Navigation */
@@ -297,103 +496,543 @@
       border-color: rgba(255,255,255,.3);
     }
 
-    /* ---------- Hero ---------- */
-    .hero{
-      position:relative; isolation:isolate; overflow:hidden;
-      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-2) 100%);
-    }
-    
-    .hero-inner{
-      display:grid; gap:var(--space-4); 
-      grid-template-columns: 1.15fr .85fr; 
-      align-items:center; 
-      padding: clamp(64px, 8vw, 120px) 0;
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--surface) 0%, var(--surface-alt) 100%);
+      padding: clamp(4rem, 10vw, 8rem) 0;
       position: relative;
-      z-index: 2;
+      overflow: hidden;
     }
-    
-    .hero h1{
-      font-family: "Space Grotesk", Inter, system-ui;
-      font-size: clamp(36px, 5.6vw, 68px);
-      line-height:1.05; letter-spacing:-.02em;
-      transform: perspective(1000px) rotateX(0deg);
-      transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-    
-    .hero h1:hover{
-      transform: perspective(1000px) rotateX(2deg);
-    }
-    
-    .hero p{
-      color:var(--muted); 
-      font-size: clamp(16px, 1.5vw, 20px);
-      line-height: 1.6;
-    }
-    
-    .hero-cta{
-      display:flex; gap:clamp(8px, 2vw, 16px); 
-      flex-wrap:wrap; margin-top:var(--space-3);
-    }
-    
-    .hero-card{
-      background: linear-gradient(180deg, rgba(17,24,39,.7), rgba(17,24,39,.35)); 
-      border:var(--line); 
-      border-radius: var(--radius-lg); 
-      padding: var(--space-3); 
-      box-shadow: var(--shadow-lg);
-      transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-      transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-      backdrop-filter: blur(20px);
-    }
-    
-    .hero-card:hover{
-      transform: perspective(1000px) rotateY(-2deg) rotateX(2deg) translateZ(20px);
-      box-shadow: 0 20px 60px rgba(0,0,0,.4);
-    }
-    
-    .meta{
-      display:flex; gap:clamp(12px, 2vw, 24px); 
-      flex-wrap:wrap; color:var(--muted); font-weight:600;
-    }
-    
-    .meta b{color:var(--text)}
 
-    /* Enhanced 3D Deco Orbs */
-    .orb{
-      position:absolute; 
-      filter: blur(clamp(30px, 4vw, 50px)); 
-      opacity:.4; z-index:-1;
-      border-radius: 50%;
-      animation: float 8s ease-in-out infinite;
+    @media (prefers-color-scheme: dark) {
+      .hero {
+        background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-surface) 100%);
+      }
     }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(180deg); }
-    }
-    
-    .orb.violet{
-      width:clamp(300px, 40vw, 500px); 
-      height:clamp(300px, 40vw, 500px); 
-      background: radial-gradient(circle at 30% 30%, rgba(124,58,237,.9), transparent 60%); 
-      top:-120px; left:-120px;
-      animation-delay: 0s;
-    }
-    
-    .orb.cyan{
-      width:clamp(350px, 45vw, 550px); 
-      height:clamp(350px, 45vw, 550px); 
-      background: radial-gradient(circle at 70% 70%, rgba(34,211,238,.85), transparent 60%); 
-      bottom:-180px; right:-160px;
-      animation-delay: -4s;
-    }
-    
-    /* New 3D Floating Elements */
-    .floating-3d{
+
+    .hero::before {
+      content: '';
       position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(30, 64, 175, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center;
+      position: relative;
       z-index: 1;
-      opacity: 0.6;
-      animation: float3d 12s ease-in-out infinite;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .hero .highlight {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition-slow);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .hero-card {
+        background: var(--dark-surface);
+        border-color: var(--dark-border);
+      }
+    }
+
+    .hero-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .meta {
+      display: flex;
+      gap: clamp(1rem, 3vw, 2rem);
+      flex-wrap: wrap;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .meta-item strong {
+      color: var(--text);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background: var(--primary-light);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover,
+    .btn-outline:focus {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--surface-alt);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+      background: var(--border);
+      transform: translateY(-1px);
+    }
+
+    /* Cards */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-slow);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .card {
+        background: var(--dark-surface);
+        border-color: var(--dark-border);
+      }
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-hover);
+    }
+
+    /* Section Styling */
+    section {
+      padding: clamp(3rem, 8vw, 6rem) 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: clamp(2rem, 5vw, 4rem);
+    }
+
+    .section-header h2 {
+      margin-bottom: 1rem;
+    }
+
+    .section-header p {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Utilities */
+    .text-center { text-align: center; }
+    .text-muted { color: var(--text-muted); }
+    .mt-1 { margin-top: 0.5rem; }
+    .mt-2 { margin-top: 1rem; }
+    .mt-3 { margin-top: 1.5rem; }
+    .mt-4 { margin-top: 2rem; }
+    .mb-1 { margin-bottom: 0.5rem; }
+    .mb-2 { margin-bottom: 1rem; }
+    .mb-3 { margin-bottom: 1.5rem; }
+    .mb-4 { margin-bottom: 2rem; }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.75rem;
+      background: var(--surface-alt);
+      color: var(--text-muted);
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border: 1px solid var(--border);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--surface-alt);
+      color: var(--text);
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .pill:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+      
+      .mobile-toggle {
+        display: flex;
+      }
+      
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+      
+      .hero h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+      }
+      
+      .hero-cta {
+        justify-content: center;
+      }
+      
+      .meta {
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      
+      .btn {
+        width: 100%;
+        justify-content: center;
+        max-width: 280px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        width: calc(100% - 2rem);
+      }
+      
+      .hero {
+        padding: 3rem 0;
+      }
+      
+      .card {
+        padding: 1rem;
+      }
+      
+      .hero-card .grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+    }
+
+    /* Focus and accessibility */
+    :focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+    
+    .btn:focus-visible {
+      outline-offset: 4px;
+    }
+    
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Missing CSS classes for existing content */
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .sub {
+      color: var(--text-muted);
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      max-width: 600px;
+    }
+
+    .muted {
+      color: var(--text-muted);
+    }
+
+    .track {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .track .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius);
+      display: grid;
+      place-items: center;
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .speaker {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: var(--radius);
+      object-fit: cover;
+      border: 2px solid var(--border);
+    }
+
+    .schedule {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .slot {
+      padding: 1rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+    }
+
+    .slot h4 {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .slot .who {
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+
+    .cta {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--surface-alt), var(--surface));
+      border: 1px solid var(--border);
+    }
+
+    .actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .ticker {
+      display: flex;
+      overflow: hidden;
+      gap: 2rem;
+      mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    }
+
+    .ticker-track {
+      display: flex;
+      gap: 2rem;
+      flex: none;
+      animation: marquee 30s linear infinite;
+    }
+
+    .sponsor {
+      display: grid;
+      place-items: center;
+      min-width: 180px;
+      height: 80px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .faq {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      background: var(--surface-alt);
+      margin-bottom: 0.75rem;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      list-style: none;
+      font-weight: 600;
+      padding: 0.5rem 0;
+    }
+
+    .faq[open] {
+      background: var(--surface);
+    }
+
+    .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .reveal,
+    .hover-rise {
+      transition: var(--transition-slow);
+    }
+
+    .hover-rise:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Newsletter and contact forms */
+    .newsletter {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .newsletter-form input {
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      transition: var(--transition);
+    }
+
+    .newsletter-form input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .newsletter-form input::placeholder {
+      color: var(--text-muted);
     }
     
     @keyframes float3d {
@@ -1391,32 +2030,30 @@
   </style>
 </head>
 <body>
-  <!-- ENHANCED NAV -->
+  <!-- Navigation -->
   <header class="nav" id="navbar">
     <div class="nav-inner container">
-      <div class="logo">
-        <div class="logo-badge" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" role="img" aria-label="Logo mark">
-            <path d="M12 2L21 7v10l-9 5-9-5V7l9-5Z" stroke="rgba(255,255,255,.9)" stroke-width="1.2"/>
-            <path d="M12 7v10M7 9.5l10 5" stroke="rgba(255,255,255,.6)" stroke-width="1.2"/>
-          </svg>
-        </div>
+      <a href="#" class="logo">
+        <div class="logo-badge">IC</div>
         <div>
-          <div style="font-size:clamp(11px, 1.5vw, 14px); color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.14em">IC‑CIGAI 2025</div>
-          <div style="font-size:clamp(14px, 2vw, 16px); font-weight:900; letter-spacing:.3px">Computational Intelligence & Generative AI</div>
+          <div style="font-size: 0.875rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;">IC-CIGAI 2025</div>
+          <div style="font-size: 1rem; font-weight: 700;">Computational Intelligence & Generative AI</div>
         </div>
-      </div>
+      </a>
       
       <!-- Desktop Navigation -->
-      <nav aria-label="Primary" class="desktop-nav">
+      <nav aria-label="Primary navigation">
         <ul class="nav-menu">
           <li><a href="#about">About</a></li>
+          <li><a href="#cfp">Call for Papers</a></li>
           <li><a href="#tracks">Tracks</a></li>
           <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#schedule">Program</a></li>
           <li><a href="#venue">Venue</a></li>
           <li><a href="#sponsors">Sponsors</a></li>
           <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#register">Register</a></li>
         </ul>
       </nav>
       
@@ -1426,261 +2063,295 @@
         <span></span>
         <span></span>
       </button>
-      
-      
     </div>
     
-    <!-- Mobile Navigation Popup -->
+    <!-- Mobile Navigation -->
     <div class="mobile-nav" id="mobileNav" aria-hidden="true">
       <div class="mobile-nav-content">
         <button class="close-nav-btn" aria-label="Close navigation menu" onclick="closeMobileMenu()">×</button>
         <div class="mobile-nav-links">
           <a href="#about" onclick="closeMobileMenu()">About</a>
+          <a href="#cfp" onclick="closeMobileMenu()">Call for Papers</a>
           <a href="#tracks" onclick="closeMobileMenu()">Tracks</a>
           <a href="#speakers" onclick="closeMobileMenu()">Speakers</a>
-          <a href="#schedule" onclick="closeMobileMenu()">Schedule</a>
+          <a href="#schedule" onclick="closeMobileMenu()">Program</a>
           <a href="#venue" onclick="closeMobileMenu()">Venue</a>
           <a href="#sponsors" onclick="closeMobileMenu()">Sponsors</a>
           <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
+          <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+          <a href="#register" onclick="closeMobileMenu()">Register</a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- ENHANCED HERO -->
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="orb violet" aria-hidden="true"></div>
-    <div class="orb cyan" aria-hidden="true"></div>
-    
-    <!-- 3D Floating Elements -->
-    <div class="floating-3d cube-3d" aria-hidden="true"></div>
-    <div class="floating-3d pyramid-3d" aria-hidden="true"></div>
-    <div class="floating-3d sphere-3d" aria-hidden="true"></div>
-    
     <div class="container hero-inner">
-      <div class="left reveal">
-        <h1>International Conference — <span style="background:linear-gradient(135deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent">Computational Intelligence</span> & Generative AI</h1>
-        <p class="mt-2">A premier gathering of researchers, builders, and creatives shaping the future of AI. Join us for keynotes, paper presentations, hands‑on demos, and networking.</p>
+      <div>
+        <div class="eyebrow">September 13, 2025 • Sandip University, Nashik</div>
+        <h1>International Conference on <span class="highlight">Computational Intelligence</span> & Generative AI</h1>
+        <p>Join leading researchers, industry experts, and innovators in artificial intelligence and machine learning for a premier academic conference featuring cutting-edge research, keynote presentations, and collaborative discussions.</p>
+        
         <div class="hero-cta">
-          <a class="btn btn-primary magnetic" href="#register"><span>Secure Your Seat</span></a>
-          <a class="btn btn-outline hover-rise" href="#cfp">Submit a Paper (CFP)</a>
+          <a href="#register" class="btn btn-primary">Register Now</a>
+          <a href="#cfp" class="btn btn-outline">Submit Paper</a>
         </div>
-        <div class="meta mt-3">
-          <div>📍 <b>Sandip University, Nashik</b></div>
-          <div>📅 <b>September 13, 2025</b></div>
-          <div>⏱️ <b>9:00 AM – 6:30 PM IST</b></div>
+        
+        <div class="meta">
+          <div class="meta-item">
+            <span>📍</span>
+            <span><strong>Sandip University</strong>, Nashik</span>
+          </div>
+          <div class="meta-item">
+            <span>📅</span>
+            <span><strong>September 13, 2025</strong></span>
+          </div>
+          <div class="meta-item">
+            <span>⏰</span>
+            <span><strong>9:00 AM – 6:30 PM IST</strong></span>
+          </div>
         </div>
-        <div class="wrap mt-3" aria-label="Highlights">
-          <span class="pill">Keynotes</span>
-          <span class="pill">Industry Panels</span>
+        
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem;">
+          <span class="pill">Keynote Speakers</span>
           <span class="pill">Research Papers</span>
-          <span class="pill">Startup Demos</span>
+          <span class="pill">Industry Panels</span>
+          <span class="pill">Networking</span>
           <span class="pill">Workshops</span>
         </div>
       </div>
-      <div class="right">
-        <div class="hero-card reveal">
-          <div class="wrap" style="justify-content:space-between; align-items:center">
-            <div>
-              <div class="eyebrow">Limited Seats</div>
-              <h3 class="mt-2" style="font-family:Space Grotesk; font-size:clamp(22px,2.6vw,30px)">Early‑bird registrations are live</h3>
-              <p class="muted mt-2">Get industry‑grade content, meet peers and experts, and explore the latest in GenAI and CI.</p>
-            </div>
-            <div style="text-align:right">
-              <div class="tag">🎟️ Student • Professional • Presenter</div>
-            </div>
+      
+      <div class="hero-card">
+        <div style="margin-bottom: 1.5rem;">
+          <div class="eyebrow">Early Bird Registration</div>
+          <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Secure your spot today</h3>
+          <p class="text-muted">Join researchers, academics, and industry professionals for an exceptional conference experience.</p>
+        </div>
+        
+        <div class="grid grid-3" style="gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="text-align: center; padding: 1rem; background: var(--surface-alt); border-radius: var(--radius); border: 1px solid var(--border);">
+            <div class="text-muted" style="font-weight: 600; font-size: 0.875rem;">Student</div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 0.25rem 0;">₹499</div>
+            <div class="text-muted" style="font-size: 0.75rem;">Limited seats</div>
           </div>
-          <div class="wrap mt-3">
-            <div class="card hover-rise" style="flex:1">
-              <div class="muted" style="font-weight:700">Student Pass</div>
-              <div style="font-size:26px; font-weight:900">₹499</div>
-              <div class="muted" style="font-size:13px">Limited quota</div>
-            </div>
-            <div class="card hover-rise" style="flex:1">
-              <div class="muted" style="font-weight:700">Professional</div>
-              <div style="font-size:26px; font-weight:900">₹1499</div>
-              <div class="muted" style="font-size:13px">Tax invoice available</div>
-            </div>
-            <div class="card hover-rise" style="flex:1">
-              <div class="muted" style="font-weight:700">Presenter</div>
-              <div style="font-size:26px; font-weight:900">₹0</div>
-              <div class="muted" style="font-size:13px">Accepted authors only</div>
-            </div>
+          <div style="text-align: center; padding: 1rem; background: var(--surface-alt); border-radius: var(--radius); border: 1px solid var(--border);">
+            <div class="text-muted" style="font-weight: 600; font-size: 0.875rem;">Professional</div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 0.25rem 0;">₹1,499</div>
+            <div class="text-muted" style="font-size: 0.75rem;">Full access</div>
           </div>
+          <div style="text-align: center; padding: 1rem; background: var(--surface-alt); border-radius: var(--radius); border: 1px solid var(--border);">
+            <div class="text-muted" style="font-weight: 600; font-size: 0.875rem;">Presenter</div>
+            <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 0.25rem 0;">Free</div>
+            <div class="text-muted" style="font-size: 0.75rem;">Accepted papers</div>
+          </div>
+        </div>
+        
+        <div style="display: flex; gap: 0.5rem;">
+          <span class="tag">🎓 Academic</span>
+          <span class="tag">🏢 Industry</span>
+          <span class="tag">🔬 Research</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- About Section -->
   <section id="about">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">About</div>
-          <h2 class="title mt-2">Why IC‑CIGAI?</h2>
-        </div>
-        <p class="sub">Where rigorous research meets real‑world impact.</p>
+      <div class="section-header">
+        <div class="eyebrow">About the Conference</div>
+        <h2>Why IC-CIGAI 2025?</h2>
+        <p>A premier platform for advancing research and fostering collaboration in computational intelligence and generative artificial intelligence.</p>
       </div>
+      
       <div class="grid grid-3">
-        <div class="card reveal">
-          <h3>Peer‑reviewed Research</h3>
-          <p class="muted mt-2">Present your latest findings in Computational Intelligence, LLMs, Responsible AI, Vision, Speech, and more. Proceedings will be archived and indexed.</p>
+        <div class="card">
+          <h3>Peer-Reviewed Research</h3>
+          <p class="text-muted mt-2">Present cutting-edge research in computational intelligence, machine learning, neural networks, and generative AI. All accepted papers will be published in indexed proceedings.</p>
         </div>
-        <div class="card reveal">
-          <h3>Industry‑grade Program</h3>
-          <p class="muted mt-2">Keynotes from practitioners, panels on production AI, and code‑heavy workshops so you leave with practical skills.</p>
+        <div class="card">
+          <h3>Industry Leadership</h3>
+          <p class="text-muted mt-2">Learn from leading practitioners and researchers through keynote presentations, panel discussions, and interactive workshops covering real-world applications.</p>
         </div>
-        <div class="card reveal">
-          <h3>Community & Careers</h3>
-          <p class="muted mt-2">Meet researchers, startups, and hiring managers. Dedicated networking and a curated expo floor for demos.</p>
+        <div class="card">
+          <h3>Professional Network</h3>
+          <p class="text-muted mt-2">Connect with researchers, industry professionals, and academic leaders. Build lasting collaborations and explore career opportunities in AI and machine learning.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TRACKS -->
+  <!-- Conference Tracks -->
   <section id="tracks">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Conference Tracks</div>
-          <h2 class="title mt-2">Explore the themes</h2>
-        </div>
-        <p class="sub">Designed for depth and real‑world relevance.</p>
+      <div class="section-header">
+        <div class="eyebrow">Conference Tracks</div>
+        <h2>Research Areas & Topics</h2>
+        <p>Explore cutting-edge research across multiple domains of computational intelligence and generative AI.</p>
       </div>
+      
       <div class="grid grid-3">
-        <div class="card track reveal hover-rise">
+        <div class="card track">
           <div class="icon">🧠</div>
           <div>
             <h3>Computational Intelligence</h3>
-            <p class="mt-1 muted">Evolutionary algorithms, swarm intelligence, fuzzy systems, neural computation.</p>
+            <p class="text-muted mt-1">Evolutionary algorithms, swarm intelligence, fuzzy systems, neural networks, and bio-inspired computing approaches.</p>
           </div>
         </div>
-        <div class="card track reveal hover-rise">
-          <div class="icon">💬</div>
+        <div class="card track">
+          <div class="icon">🤖</div>
           <div>
-            <h3>Generative Models</h3>
-            <p class="mt-1 muted">LLMs, diffusion, VAEs, prompt engineering, tool‑use, agents, evaluation.</p>
+            <h3>Generative AI Models</h3>
+            <p class="text-muted mt-1">Large language models, diffusion models, GANs, VAEs, prompt engineering, and AI agent systems.</p>
           </div>
         </div>
-        <div class="card track reveal hover-rise">
+        <div class="card track">
           <div class="icon">🛡️</div>
           <div>
-            <h3>Responsible & Secure AI</h3>
-            <p class="mt-1 muted">Safety, alignment, governance, audits, red‑teaming, privacy‑preserving ML.</p>
+            <h3>Responsible AI</h3>
+            <p class="text-muted mt-1">AI safety, ethics, fairness, explainability, governance frameworks, and privacy-preserving machine learning.</p>
           </div>
         </div>
-        <div class="card track reveal hover-rise">
-          <div class="icon">🖼️</div>
+        <div class="card track">
+          <div class="icon">�️</div>
           <div>
-            <h3>Vision, Speech & Multimodal</h3>
-            <p class="mt-1 muted">Perception models in the wild, evaluation metrics, compression, distillation.</p>
+            <h3>Computer Vision & Multimodal</h3>
+            <p class="text-muted mt-1">Image processing, video analysis, multimodal learning, vision-language models, and perceptual AI systems.</p>
           </div>
         </div>
-        <div class="card track reveal hover-rise">
+        <div class="card track">
           <div class="icon">🏭</div>
           <div>
             <h3>AI in Production</h3>
-            <p class="mt-1 muted">MLOps, data pipelines, monitoring, cost optimization, edge deployment.</p>
+            <p class="text-muted mt-1">MLOps, model deployment, scalability, monitoring, edge computing, and industrial AI applications.</p>
           </div>
         </div>
-        <div class="card track reveal hover-rise">
-          <div class="icon">🚀</div>
+        <div class="card track">
+          <div class="icon">�</div>
           <div>
-            <h3>Startups & Demos</h3>
-            <p class="mt-1 muted">Product showcases, research‑to‑startup stories, and rapid lightning demos.</p>
+            <h3>Applied Research</h3>
+            <p class="text-muted mt-1">Healthcare AI, robotics, NLP applications, recommender systems, and domain-specific AI solutions.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SPEAKERS -->
+  <!-- Keynote Speakers -->
   <section id="speakers">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Speakers</div>
-          <h2 class="title mt-2">Meet the voices shaping AI</h2>
-        </div>
-        <p class="sub">More to be announced—stay tuned.</p>
+      <div class="section-header">
+        <div class="eyebrow">Keynote Speakers</div>
+        <h2>Distinguished Speakers</h2>
+        <p>Learn from leading researchers and industry experts who are shaping the future of AI and computational intelligence.</p>
       </div>
+      
       <div class="grid grid-3">
-        <!-- Speaker Card Template -->
-        <div class="card speaker reveal hover-rise">
-          <img class="avatar" src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=400&auto=format&fit=crop" alt="Portrait of keynote speaker"/>
+        <div class="card speaker">
+          <img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" alt="Dr. Rajesh Kumar"/>
           <div>
-            <h3>Dr. A. Keynote</h3>
-            <div class="muted">Chief Scientist, AI Systems • Keynote</div>
-            <div class="wrap mt-2"><span class="tag">LLMs</span><span class="tag">Scaling Laws</span></div>
+            <h3>Dr. Rajesh Kumar</h3>
+            <p class="text-muted">Professor of AI, IIT Delhi</p>
+            <div class="wrap mt-2">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Neural Networks</span>
+            </div>
           </div>
         </div>
-        <div class="card speaker reveal hover-rise">
-          <img class="avatar" src="https://images.unsplash.com/photo-1549351512-c5e12b12f1ea?q=80&w=400&auto=format&fit=crop" alt="Portrait of speaker"/>
+        <div class="card speaker">
+          <img class="avatar" src="https://images.unsplash.com/photo-1494790108755-2616b19ad21e?q=80&w=400&auto=format&fit=crop" alt="Dr. Priya Sharma"/>
           <div>
-            <h3>Prof. B. Researcher</h3>
-            <div class="muted">University of Computing • Talk</div>
-            <div class="wrap mt-2"><span class="tag">Optimization</span><span class="tag">Robustness</span></div>
+            <h3>Dr. Priya Sharma</h3>
+            <p class="text-muted">Lead AI Researcher, Google Research</p>
+            <div class="wrap mt-2">
+              <span class="tag">Generative AI</span>
+              <span class="tag">LLMs</span>
+            </div>
           </div>
         </div>
-        <div class="card speaker reveal hover-rise">
-          <img class="avatar" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=400&auto=format&fit=crop" alt="Portrait of speaker"/>
+        <div class="card speaker">
+          <img class="avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop" alt="Prof. Amit Patel"/>
           <div>
-            <h3>C. Builder</h3>
-            <div class="muted">Founder, Applied GenAI • Panel</div>
-            <div class="wrap mt-2"><span class="tag">Agents</span><span class="tag">Tooling</span></div>
+            <h3>Prof. Amit Patel</h3>
+            <p class="text-muted">Director, Microsoft Research India</p>
+            <div class="wrap mt-2">
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Multimodal AI</span>
+            </div>
           </div>
         </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <p class="text-muted">More speakers to be announced soon. Stay tuned for updates!</p>
       </div>
     </div>
   </section>
 
-  <!-- SCHEDULE -->
+  <!-- Program Schedule -->
   <section id="schedule">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Schedule</div>
-          <h2 class="title mt-2">One power‑packed day</h2>
-        </div>
-        <p class="sub">Detailed agenda with rooms will be published closer to the event.</p>
+      <div class="section-header">
+        <div class="eyebrow">Program Schedule</div>
+        <h2>Conference Agenda</h2>
+        <p>A comprehensive one-day program featuring keynotes, research presentations, panels, and networking opportunities.</p>
       </div>
+      
       <div class="grid grid-2">
-        <div class="schedule reveal">
-          <div class="muted">09:00 – 10:00</div>
-          <div class="slot">
-            <h4>Registration & Breakfast</h4>
-            <div class="who">Check‑in, badges, and networking.</div>
+        <div>
+          <h3 class="mb-3">Morning Session</h3>
+          <div class="schedule">
+            <div class="text-muted" style="font-weight: 600;">09:00 – 10:00</div>
+            <div class="slot">
+              <h4>Registration & Welcome</h4>
+              <p class="who">Check-in, conference materials, and networking breakfast</p>
+            </div>
           </div>
-          <div class="muted">10:00 – 11:00</div>
-          <div class="slot">
-            <h4>Opening Keynote</h4>
-            <div class="who">Dr. A. Keynote</div>
+          <div class="schedule">
+            <div class="text-muted" style="font-weight: 600;">10:00 – 11:00</div>
+            <div class="slot">
+              <h4>Opening Keynote</h4>
+              <p class="who">Dr. Rajesh Kumar - "The Future of Computational Intelligence"</p>
+            </div>
           </div>
-          <div class="muted">11:15 – 13:00</div>
-          <div class="slot">
-            <h4>Research Paper Session I</h4>
-            <div class="who">Computational Intelligence</div>
-          </div>
-        </div>
-        <div class="schedule reveal">
-          <div class="muted">14:00 – 15:00</div>
-          <div class="slot">
-            <h4>Industry Panel: GenAI in Production</h4>
-            <div class="who">Leaders from startups & enterprises</div>
-          </div>
-          <div class="muted">15:15 – 16:30</div>
-          <div class="slot">
-            <h4>Workshops & Demos</h4>
-            <div class="who">Hands‑on tracks (bring your laptop)</div>
-          </div>
-          <div class="muted">16:45 – 18:30</div>
-          <div class="slot">
-            <h4>Paper Session II + Awards</h4>
-            <div class="who">Best Paper • Best Demo</div>
+          <div class="schedule">
+            <div class="text-muted" style="font-weight: 600;">11:15 – 12:30</div>
+            <div class="slot">
+              <h4>Research Paper Session I</h4>
+              <p class="who">Computational Intelligence & Neural Networks</p>
+            </div>
           </div>
         </div>
+        
+        <div>
+          <h3 class="mb-3">Afternoon Session</h3>
+          <div class="schedule">
+            <div class="text-muted" style="font-weight: 600;">14:00 – 15:00</div>
+            <div class="slot">
+              <h4>Industry Panel</h4>
+              <p class="who">Generative AI in Production: Real-world Applications</p>
+            </div>
+          </div>
+          <div class="schedule">
+            <div class="text-muted" style="font-weight: 600;">15:15 – 16:30</div>
+            <div class="slot">
+              <h4>Research Paper Session II</h4>
+              <p class="who">Generative AI & Applications</p>
+            </div>
+          </div>
+          <div class="schedule">
+            <div class="text-muted" style="font-weight: 600;">16:45 – 18:00</div>
+            <div class="slot">
+              <h4>Workshops & Demos</h4>
+              <p class="who">Hands-on sessions and technology demonstrations</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <p class="text-muted"><strong>Note:</strong> Detailed schedule with room assignments will be published closer to the event date.</p>
       </div>
     </div>
   </section>
@@ -1732,94 +2403,332 @@
     </div>
   </section>
 
-  <!-- CFP -->
+  <!-- Call for Papers -->
   <section id="cfp">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Call for Papers</div>
-          <h2 class="title mt-2">Submit groundbreaking work</h2>
-        </div>
-        <p class="sub">Double‑blind review • 8‑page limit • Camera‑ready upon acceptance</p>
+      <div class="section-header">
+        <div class="eyebrow">Call for Papers</div>
+        <h2>Submit Your Research</h2>
+        <p>We invite high-quality research papers that advance the state-of-the-art in computational intelligence and generative AI. All accepted papers will be published in indexed conference proceedings.</p>
       </div>
-      <div class="grid grid-2">
-        <div class="card reveal">
-          <h3>Important Dates</h3>
-          <ul class="mt-2 muted" style="line-height:1.9">
-            <li>Submission Deadline: <b>August 28, 2025</b></li>
-            <li>Notification: <b>September 5, 2025</b></li>
-            <li>Camera‑ready: <b>September 9, 2025</b></li>
+      
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Paper Categories</h3>
+          <ul class="text-muted mt-2" style="line-height: 1.8;">
+            <li><strong>Full Papers:</strong> 6-8 pages of original research</li>
+            <li><strong>Short Papers:</strong> 4 pages for work-in-progress</li>
+            <li><strong>Poster Papers:</strong> 2 pages for preliminary findings</li>
+            <li><strong>Industry Track:</strong> Real-world applications and case studies</li>
           </ul>
         </div>
-        <div class="card reveal">
-          <h3>Submission Topics</h3>
-          <p class="mt-2 muted">CI, LLMs, multimodal, optimization, ethics, systems, tooling, benchmarks, and applications in health, finance, robotics, and education.</p>
+        
+        <div class="card">
+          <h3>Submission Guidelines</h3>
+          <ul class="text-muted mt-2" style="line-height: 1.8;">
+            <li>Double-blind peer review process</li>
+            <li>IEEE conference paper format</li>
+            <li>Submit via CMT (Conference Management Toolkit)</li>
+            <li>Plagiarism check mandatory</li>
+            <li>English language only</li>
+          </ul>
+        </div>
+        
+        <div class="card">
+          <h3>Important Dates</h3>
+          <ul class="text-muted mt-2" style="line-height: 1.8;">
+            <li><strong>Paper Submission:</strong> August 25, 2025</li>
+            <li><strong>Notification:</strong> September 5, 2025</li>
+            <li><strong>Camera Ready:</strong> September 10, 2025</li>
+            <li><strong>Conference Date:</strong> September 13, 2025</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="grid grid-2 mt-4">
+        <div class="card">
+          <h3>Research Topics (Not Limited To)</h3>
           <div class="wrap mt-2">
-            <a class="btn btn-outline hover-rise" href="#">Author Kit</a>
-            <a class="btn btn-outline hover-rise" href="#">Submit via CMT</a>
+            <span class="pill">Machine Learning</span>
+            <span class="pill">Deep Learning</span>
+            <span class="pill">Large Language Models</span>
+            <span class="pill">Computer Vision</span>
+            <span class="pill">Natural Language Processing</span>
+            <span class="pill">Generative AI</span>
+            <span class="pill">Neural Networks</span>
+            <span class="pill">Evolutionary Computing</span>
+            <span class="pill">Swarm Intelligence</span>
+            <span class="pill">Fuzzy Systems</span>
+            <span class="pill">AI Ethics</span>
+            <span class="pill">Explainable AI</span>
+            <span class="pill">Edge Computing</span>
+            <span class="pill">AI in Healthcare</span>
+            <span class="pill">AI in Finance</span>
+            <span class="pill">Robotics</span>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h3>Publication & Indexing</h3>
+          <p class="text-muted mt-2">All accepted papers will be published in the conference proceedings and submitted for indexing in major databases including:</p>
+          <ul class="text-muted mt-2" style="line-height: 1.8;">
+            <li>IEEE Xplore Digital Library</li>
+            <li>Scopus (Under Review)</li>
+            <li>Google Scholar</li>
+            <li>DBLP</li>
+          </ul>
+          <div class="mt-3">
+            <a href="#" class="btn btn-primary">Submit Paper</a>
+            <a href="#" class="btn btn-outline">Download Template</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VENUE -->
+  <!-- Venue -->
   <section id="venue">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Venue</div>
-          <h2 class="title mt-2">Sandip University, Nashik</h2>
-        </div>
-        <p class="sub">O‑Building Seminar Hall • Easily accessible • On‑campus amenities</p>
+      <div class="section-header">
+        <div class="eyebrow">Conference Venue</div>
+        <h2>Sandip University, Nashik</h2>
+        <p>State-of-the-art facilities in the heart of Maharashtra's education hub, providing the perfect setting for academic discourse and networking.</p>
       </div>
+      
       <div class="grid grid-2">
-        <div class="card reveal">
-          <h3>Getting Here</h3>
-          <p class="muted mt-2">The campus is well connected via road and local transport. Parking available. Please carry a valid ID to enter the campus.</p>
-          <div class="wrap mt-2">
-            <a class="btn btn-outline hover-rise" href="https://maps.google.com" target="_blank" rel="noreferrer">Open in Maps</a>
-            <a class="btn btn-outline hover-rise" href="#contact">Travel Help</a>
+        <div class="card" style="min-height: 300px;">
+          <iframe 
+            title="Sandip University Location Map" 
+            style="border: 0; width: 100%; height: 300px; border-radius: var(--radius);" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.0!2d74.0!3d20.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSandip%20University%20Nashik!5e0!3m2!1sen!2sin!4v1632000000000!5m2!1sen!2sin">
+          </iframe>
+        </div>
+        
+        <div class="card">
+          <h3>Conference Venue Details</h3>
+          <div class="text-muted mt-2" style="line-height: 1.8;">
+            <div style="margin-bottom: 1rem;">
+              <strong>Main Venue:</strong><br>
+              Sandip University Main Campus<br>
+              Trimbak Road, Mahiravani, Nashik<br>
+              Maharashtra 422213, India
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+              <strong>Conference Hall:</strong><br>
+              O-Building Seminar Hall<br>
+              Capacity: 300+ attendees<br>
+              Air-conditioned with modern AV facilities
+            </div>
+            
+            <div>
+              <strong>Facilities:</strong><br>
+              • High-speed WiFi throughout campus<br>
+              • Ample parking space<br>
+              • On-campus cafeteria and refreshments<br>
+              • Accessibility features for differently-abled
+            </div>
           </div>
         </div>
-        <div class="card reveal" style="min-height:280px">
-          <iframe title="Map" style="border:0; width:100%; height:280px; border-radius:16px" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sandip%20University%2C%20Nashik&output=embed"></iframe>
+      </div>
+      
+      <div class="grid grid-3 mt-4">
+        <div class="card">
+          <h3>🚗 By Road</h3>
+          <p class="text-muted mt-2">
+            <strong>From Mumbai:</strong> 4 hours via NH160<br>
+            <strong>From Pune:</strong> 3 hours via NH60<br>
+            <strong>From Aurangabad:</strong> 2 hours via SH27
+          </p>
+          <a href="https://maps.google.com/?q=Sandip+University+Nashik" target="_blank" class="btn btn-outline mt-3">Get Directions</a>
         </div>
+        
+        <div class="card">
+          <h3>🚆 By Train</h3>
+          <p class="text-muted mt-2">
+            <strong>Nashik Road Station:</strong> 15 km from campus<br>
+            <strong>Nashik Central:</strong> 20 km from campus<br>
+            Regular trains from Mumbai, Pune, Delhi
+          </p>
+          <a href="#contact" class="btn btn-outline mt-3">Travel Assistance</a>
+        </div>
+        
+        <div class="card">
+          <h3>✈️ By Air</h3>
+          <p class="text-muted mt-2">
+            <strong>Nashik Airport:</strong> 25 km from campus<br>
+            <strong>Mumbai Airport:</strong> 180 km (3.5 hours)<br>
+            <strong>Pune Airport:</strong> 150 km (3 hours)
+          </p>
+          <a href="#contact" class="btn btn-outline mt-3">Airport Pickup</a>
+        </div>
+      </div>
+      
+      <div class="card mt-4">
+        <h3>🏨 Accommodation Options</h3>
+        <div class="grid grid-3 mt-3">
+          <div>
+            <h4>Budget Hotels</h4>
+            <ul class="text-muted" style="line-height: 1.8; font-size: 0.9rem;">
+              <li>Hotel Panchavati (₹1,500/night)</li>
+              <li>Hotel Satyaheera (₹1,200/night)</li>
+              <li>Express Inn (₹1,000/night)</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Mid-Range Hotels</h4>
+            <ul class="text-muted" style="line-height: 1.8; font-size: 0.9rem;">
+              <li>Ginger Nashik (₹3,000/night)</li>
+              <li>Hotel Raj Palace (₹2,500/night)</li>
+              <li>Treebo Trip (₹2,200/night)</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Premium Hotels</h4>
+            <ul class="text-muted" style="line-height: 1.8; font-size: 0.9rem;">
+              <li>Radisson Blu (₹6,000/night)</li>
+              <li>The Gateway Nashik (₹5,500/night)</li>
+              <li>Express Inn Nashik (₹4,000/night)</li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-muted mt-3" style="font-size: 0.9rem;">
+          <strong>Note:</strong> Special conference rates may be available. Contact us for group booking assistance and recommendations.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- SPONSORS -->
+  <!-- Sponsors -->
   <section id="sponsors">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Sponsors</div>
-          <h2 class="title mt-2">Powered by our partners</h2>
-        </div>
-        <p class="sub">Interested in sponsoring? Get the prospectus.</p>
+      <div class="section-header">
+        <div class="eyebrow">Conference Sponsors</div>
+        <h2>Our Partners & Supporters</h2>
+        <p>We're grateful to our sponsors who make this conference possible and help advance research in computational intelligence and generative AI.</p>
       </div>
-      <div class="card reveal">
-        <div class="ticker" aria-label="Sponsor logos scroller">
-          <div class="ticker-track">
-            <div class="sponsor">Acme AI</div>
-            <div class="sponsor">Vector Labs</div>
-            <div class="sponsor">CloudNine</div>
-            <div class="sponsor">NeoCompute</div>
-            <div class="sponsor">DataForge</div>
-            <div class="sponsor">Promptly</div>
-            <!-- duplicate set for seamless loop -->
-            <div class="sponsor">Acme AI</div>
-            <div class="sponsor">Vector Labs</div>
-            <div class="sponsor">CloudNine</div>
-            <div class="sponsor">NeoCompute</div>
-            <div class="sponsor">DataForge</div>
-            <div class="sponsor">Promptly</div>
+      
+      <!-- Sponsor Tiers -->
+      <div class="card mb-4">
+        <h3 class="text-center mb-3">Platinum Sponsor</h3>
+        <div style="text-align: center; padding: 2rem;">
+          <div style="display: inline-block; padding: 1.5rem 3rem; border: 2px solid var(--border); border-radius: var(--radius-lg); background: var(--surface-alt); font-size: 1.5rem; font-weight: 700; color: var(--text-muted);">
+            Your Company Here
           </div>
         </div>
-        <div class="wrap mt-3">
-          <a class="btn btn-outline hover-rise" href="#">Sponsor Deck</a>
-          <a class="btn btn-primary magnetic" href="#contact"><span>Contact Partnerships</span></a>
+      </div>
+      
+      <div class="grid grid-2 mb-4">
+        <div class="card">
+          <h3 class="text-center mb-3">Gold Sponsors</h3>
+          <div class="grid grid-2" style="gap: 1rem;">
+            <div style="text-align: center; padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-alt); font-weight: 600; color: var(--text-muted);">
+              TechCorp AI
+            </div>
+            <div style="text-align: center; padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-alt); font-weight: 600; color: var(--text-muted);">
+              DataVision Labs
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h3 class="text-center mb-3">Silver Sponsors</h3>
+          <div class="grid grid-2" style="gap: 1rem;">
+            <div style="text-align: center; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-alt); font-weight: 600; color: var(--text-muted); font-size: 0.9rem;">
+              AI Solutions Inc
+            </div>
+            <div style="text-align: center; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-alt); font-weight: 600; color: var(--text-muted); font-size: 0.9rem;">
+              Neural Networks Co
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Industry Partners -->
+      <div class="card mb-4">
+        <h3 class="text-center mb-3">Industry Partners</h3>
+        <div class="ticker" aria-label="Industry partners showcase">
+          <div class="ticker-track">
+            <div class="sponsor">Microsoft Research</div>
+            <div class="sponsor">Google AI</div>
+            <div class="sponsor">NVIDIA</div>
+            <div class="sponsor">IBM Watson</div>
+            <div class="sponsor">OpenAI</div>
+            <div class="sponsor">Meta AI</div>
+            <div class="sponsor">Amazon Web Services</div>
+            <div class="sponsor">Intel Labs</div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="sponsor">Microsoft Research</div>
+            <div class="sponsor">Google AI</div>
+            <div class="sponsor">NVIDIA</div>
+            <div class="sponsor">IBM Watson</div>
+            <div class="sponsor">OpenAI</div>
+            <div class="sponsor">Meta AI</div>
+            <div class="sponsor">Amazon Web Services</div>
+            <div class="sponsor">Intel Labs</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sponsorship Opportunities -->
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>🤝 Become a Sponsor</h3>
+          <p class="text-muted mt-2">Support cutting-edge research and connect with the brightest minds in AI and computational intelligence. Multiple sponsorship packages available.</p>
+          
+          <div class="mt-3">
+            <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Sponsorship Benefits:</h4>
+            <ul class="text-muted" style="line-height: 1.8; font-size: 0.9rem;">
+              <li>Logo placement on conference materials</li>
+              <li>Speaking opportunities</li>
+              <li>Networking sessions with researchers</li>
+              <li>Access to conference proceedings</li>
+              <li>Recruitment opportunities</li>
+            </ul>
+          </div>
+          
+          <div class="mt-3">
+            <a href="#contact" class="btn btn-primary">Sponsor Inquiry</a>
+            <a href="#" class="btn btn-outline">Download Prospectus</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h3>📚 Academic Partners</h3>
+          <p class="text-muted mt-2">Leading universities and research institutions supporting IC-CIGAI 2025:</p>
+          
+          <ul class="text-muted mt-3" style="line-height: 1.8;">
+            <li><strong>Sandip University</strong> - Host Institution</li>
+            <li><strong>Indian Institute of Technology</strong> - Academic Partner</li>
+            <li><strong>International Association for Pattern Recognition</strong></li>
+            <li><strong>IEEE Computer Society</strong> - Technical Sponsor</li>
+            <li><strong>Association for Computing Machinery</strong></li>
+          </ul>
+          
+          <div class="mt-3">
+            <a href="#contact" class="btn btn-outline">Partner With Us</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Media Partners -->
+      <div class="card mt-4">
+        <h3 class="text-center mb-3">📰 Media Partners</h3>
+        <div class="grid grid-4" style="gap: 1rem;">
+          <div style="text-align: center; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-alt); font-weight: 600; color: var(--text-muted); font-size: 0.85rem;">
+            AI Magazine
+          </div>
+          <div style="text-align: center; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-alt); font-weight: 600; color: var(--text-muted); font-size: 0.85rem;">
+            Tech Today
+          </div>
+          <div style="text-align: center; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-alt); font-weight: 600; color: var(--text-muted); font-size: 0.85rem;">
+            Research Weekly
+          </div>
+          <div style="text-align: center; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-alt); font-weight: 600; color: var(--text-muted); font-size: 0.85rem;">
+            Digital Times
+          </div>
         </div>
       </div>
     </div>
@@ -1828,177 +2737,408 @@
   <!-- FAQ -->
   <section id="faq">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">FAQ</div>
-          <h2 class="title mt-2">Good to know</h2>
-        </div>
-        <p class="sub">Logistics, tickets, and policies.</p>
+      <div class="section-header">
+        <div class="eyebrow">Frequently Asked Questions</div>
+        <h2>Everything You Need to Know</h2>
+        <p>Find answers to common questions about registration, submissions, venue, and conference logistics.</p>
       </div>
-      <details class="faq reveal">
-        <summary>Do you offer group discounts?</summary>
-        <p class="muted mt-2">Yes. For groups of 10+ attendees, reach out via the partnerships form for custom pricing.</p>
-      </details>
-      <details class="faq reveal">
-        <summary>Are meals included?</summary>
-        <p class="muted mt-2">Tea/coffee and light refreshments are included. Lunch options are available on campus.</p>
-      </details>
-      <details class="faq reveal">
-        <summary>Refund policy</summary>
-        <p class="muted mt-2">Tickets are transferable. Refunds available up to 7 days before the event.</p>
-      </details>
+      
+      <div class="grid grid-2">
+        <!-- Registration & Attendance -->
+        <div>
+          <h3 class="mb-3">Registration & Attendance</h3>
+          
+          <details class="faq">
+            <summary>What does registration include?</summary>
+            <p class="text-muted mt-2">Registration includes access to all sessions, keynotes, workshops, conference materials, tea/coffee breaks, networking sessions, and digital proceedings. Lunch is available for purchase on campus.</p>
+          </details>
+          
+          <details class="faq">
+            <summary>Are there group discounts available?</summary>
+            <p class="text-muted mt-2">Yes! Groups of 10+ attendees receive a 15% discount. Students from the same institution get 20% off for groups of 5+. Contact us for custom pricing for larger groups.</p>
+          </details>
+          
+          <details class="faq">
+            <summary>What is the refund policy?</summary>
+            <p class="text-muted mt-2">Full refunds are available up to 15 days before the event. Partial refunds (50%) available up to 7 days before. No refunds within 7 days, but tickets are transferable to colleagues.</p>
+          </details>
+          
+          <details class="faq">
+            <summary>Do I need a student ID for student pricing?</summary>
+            <p class="text-muted mt-2">Yes, valid student ID or enrollment verification is required. This can be uploaded during registration or presented at check-in. Student pricing is available for undergraduate, graduate, and PhD students.</p>
+          </details>
+          
+          <details class="faq">
+            <summary>Is there virtual attendance option?</summary>
+            <p class="text-muted mt-2">This is an in-person event only. However, keynote sessions will be recorded and made available to registered attendees within 48 hours post-conference.</p>
+          </details>
+        </div>
+        
+        <!-- Papers & Presentations -->
+        <div>
+          <h3 class="mb-3">Papers & Presentations</h3>
+          
+          <details class="faq">
+            <summary>What paper formats are accepted?</summary>
+            <p class="text-muted mt-2">We accept full papers (6-8 pages), short papers (4 pages), poster papers (2 pages), and industry track submissions. All must follow IEEE conference format template.</p>
+          </details>
+          
+          <details class="faq">
+            <summary>Is the review process double-blind?</summary>
+            <p class="text-muted mt-2">Yes, all submissions undergo double-blind peer review by at least 3 reviewers from our international program committee. Author identities are hidden during review.</p>
+          </details>
+          
+          <details class="faq">
+            <summary>Can I submit multiple papers?</summary>
+            <p class="text-muted mt-2">Yes, but each paper must present substantially different research. Authors can submit up to 3 papers maximum. Each accepted paper requires at least one paid registration.</p>
+          </details>
+          
+          <details class="faq">
+            <summary>Will proceedings be indexed?</summary>
+            <p class="text-muted mt-2">Yes, accepted papers will be published in IEEE Xplore and submitted for Scopus indexing. All papers will be available in Google Scholar and DBLP immediately after publication.</p>
+          </details>
+          
+          <details class="faq">
+            <summary>What if my paper is not accepted?</summary>
+            <p class="text-muted mt-2">You'll receive detailed reviewer feedback. We encourage resubmission to future conferences. You can still attend as a regular participant and may be eligible for poster presentation of ongoing work.</p>
+          </details>
+        </div>
+      </div>
+      
+      <div class="grid grid-2 mt-4">
+        <!-- Logistics & Travel -->
+        <div>
+          <h3 class="mb-3">Logistics & Travel</h3>
+          
+          <details class="faq">
+            <summary>Is parking available at the venue?</summary>
+            <p class="text-muted mt-2">Yes, free parking is available on campus. Additional overflow parking is available within walking distance. We recommend carpooling when possible.</p>
+          </details>
+          
+          <details class="faq">
+            <summary>Are meals provided?</summary>
+            <p class="text-muted mt-2">Tea, coffee, and light refreshments are included. Lunch can be purchased at the campus cafeteria (₹200-300) or nearby restaurants. We'll provide a list of recommended dining options.</p>
+          </details>
+          
+          <details class="faq">
+            <summary>What should I bring to the conference?</summary>
+            <p class="text-muted mt-2">Bring a valid photo ID, your registration confirmation, business cards for networking, a laptop/tablet for notes, and comfortable walking shoes. Power outlets will be available in session rooms.</p>
+          </details>
+          
+          <details class="faq">
+            <summary>Is the venue accessible?</summary>
+            <p class="text-muted mt-2">Yes, Sandip University is fully accessible with ramps, elevators, and accessible restrooms. Please mention any special requirements during registration so we can assist you better.</p>
+          </details>
+        </div>
+        
+        <!-- Technical & Miscellaneous -->
+        <div>
+          <h3 class="mb-3">Technical & Miscellaneous</h3>
+          
+          <details class="faq">
+            <summary>Will WiFi be available?</summary>
+            <p class="text-muted mt-2">Yes, complimentary high-speed WiFi will be available throughout the conference venue. Network credentials will be provided during registration check-in.</p>
+          </details>
+          
+          <details class="faq">
+            <summary>Can I change my registration type?</summary>
+            <p class="text-muted mt-2">Yes, registration type can be modified up to 7 days before the event. Price differences will be charged or refunded accordingly. Contact us at ic-cigai@sandipuniversity.edu.in</p>
+          </details>
+          
+          <details class="faq">
+            <summary>Are presentation slides available?</summary>
+            <p class="text-muted mt-2">Speakers may choose to share their slides. These will be made available to registered attendees through our conference portal within one week after the event.</p>
+          </details>
+          
+          <details class="faq">
+            <summary>What's the dress code?</summary>
+            <p class="text-muted mt-2">Business casual is recommended. The venue is air-conditioned, so consider bringing a light jacket. For presentations, business attire is suggested but not mandatory.</p>
+          </details>
+          
+          <details class="faq">
+            <summary>Will certificates be provided?</summary>
+            <p class="text-muted mt-2">Yes, digital certificates of participation will be emailed within 5 business days. Paper certificates for presentations and workshops can be collected at the registration desk.</p>
+          </details>
+        </div>
+      </div>
+      
+      <div class="card mt-4 text-center">
+        <h3>Still have questions?</h3>
+        <p class="text-muted mt-2">Our organizing committee is here to help. Don't hesitate to reach out for any additional information.</p>
+        <div class="mt-3">
+          <a href="#contact" class="btn btn-primary">Contact Us</a>
+          <a href="mailto:ic-cigai@sandipuniversity.edu.in" class="btn btn-outline">Email Directly</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- Contact -->
   <section id="contact">
     <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Contact</div>
-          <h2 class="title mt-2">We'd love to help</h2>
-        </div>
-        <p class="sub">For speaking, sponsorship, media, and logistics.</p>
+      <div class="section-header">
+        <div class="eyebrow">Get in Touch</div>
+        <h2>Contact & Support</h2>
+        <p>Have questions about the conference, submissions, registration, or sponsorship? Our organizing committee is here to help you.</p>
       </div>
+      
       <div class="grid grid-2">
-        <div class="card reveal">
-          <form onsubmit="event.preventDefault(); announce('Message sent. We\'ll get back soon.'); this.reset();" aria-label="Contact form">
-            <div class="wrap" style="gap:16px">
-              <div style="flex:1; min-width:220px">
-                <label for="cname" class="muted" style="font-weight:700">Full Name</label>
-                <input id="cname" required placeholder="Your Name" style="margin-top:6px; width:100%; padding:12px 14px; border-radius:12px; background:rgba(255,255,255,.04); border:var(--line); color:var(--text)"/>
-              </div>
-              <div style="flex:1; min-width:220px">
-                <label for="cemail" class="muted" style="font-weight:700">Email</label>
-                <input id="cemail" type="email" required placeholder="you@example.com" style="margin-top:6px; width:100%; padding:12px 14px; border-radius:12px; background:rgba(255,255,255,.04); border:var(--line); color:var(--text)"/>
-              </div>
-            </div>
-            <div class="mt-2">
-              <label for="msg" class="muted" style="font-weight:700">Message</label>
-              <textarea id="msg" rows="5" required placeholder="Tell us how we can help" style="margin-top:6px; width:100%; padding:12px 14px; border-radius:12px; background:rgba(255,255,255,.04); border:var(--line); color:var(--text)"></textarea>
-            </div>
-            <button class="btn btn-primary magnetic mt-3" type="submit"><span>Send Message</span></button>
-          </form>
-        </div>
-        <div class="card reveal">
-          <h3>Organizing Committee</h3>
-          <ul class="muted mt-2" style="line-height:1.9">
-            <li>School of Computer Science & Engineering, Sandip University</li>
-            <li>Email: <a href="mailto:ic-cigai@sandipuniversity.edu.in" style="color:var(--brand-2)">ic-cigai@sandipuniversity.edu.in</a></li>
-            <li>WhatsApp: +91‑00000‑00000</li>
-          </ul>
-          <h3 class="mt-3">Follow</h3>
-          <div class="wrap mt-2">
-            <a class="btn btn-outline hover-rise" href="#">X (Twitter)</a>
-            <a class="btn btn-outline hover-rise" href="#">LinkedIn</a>
-            <a class="btn btn-outline hover-rise" href="#">Instagram</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ENHANCED FOOTER -->
-  <footer>
-    <div class="footer-content">
-      <div class="container">
-        <div class="footer-grid">
-          <!-- Brand Section -->
-          <div class="footer-brand">
-            <div class="footer-logo">
-              <div class="footer-logo-badge" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-label="Logo mark">
-                  <path d="M12 2L21 7v10l-9 5-9-5V7l9-5Z" stroke="white" stroke-width="1.2"/>
-                  <path d="M12 7v10M7 9.5l10 5" stroke="rgba(255,255,255,.7)" stroke-width="1.2"/>
-                </svg>
+        <!-- Contact Form -->
+        <div class="card">
+          <h3>Send us a Message</h3>
+          <form onsubmit="event.preventDefault(); announce('Message sent successfully! We\'ll get back to you within 24 hours.'); this.reset();" aria-label="Contact form">
+            <div class="grid grid-2" style="gap: 1rem; margin-bottom: 1rem;">
+              <div>
+                <label for="cname" class="text-muted" style="font-weight: 600; font-size: 0.9rem;">Full Name *</label>
+                <input 
+                  id="cname" 
+                  name="name" 
+                  required 
+                  placeholder="Your Full Name" 
+                  style="margin-top: 6px; width: 100%; padding: 12px 14px; border-radius: var(--radius); background: var(--surface-alt); border: 1px solid var(--border); color: var(--text); transition: var(--transition);"
+                />
               </div>
               <div>
-                <h3>IC‑CIGAI 2025</h3>
+                <label for="cemail" class="text-muted" style="font-weight: 600; font-size: 0.9rem;">Email Address *</label>
+                <input 
+                  id="cemail" 
+                  name="email" 
+                  type="email" 
+                  required 
+                  placeholder="your@email.com" 
+                  style="margin-top: 6px; width: 100%; padding: 12px 14px; border-radius: var(--radius); background: var(--surface-alt); border: 1px solid var(--border); color: var(--text); transition: var(--transition);"
+                />
               </div>
             </div>
-            <p>Bridging computational intelligence and generative AI through world-class research, innovative presentations, and meaningful connections.</p>
-            <div class="social-links">
-              <a href="#" aria-label="Follow on X (Twitter)">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-              </a>
-              <a href="#" aria-label="Follow on LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
-              <a href="#" aria-label="Follow on Instagram">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-              </a>
-              <a href="#" aria-label="Follow on YouTube">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
-              </a>
+            
+            <div style="margin-bottom: 1rem;">
+              <label for="subject" class="text-muted" style="font-weight: 600; font-size: 0.9rem;">Subject</label>
+              <select 
+                id="subject" 
+                name="subject" 
+                style="margin-top: 6px; width: 100%; padding: 12px 14px; border-radius: var(--radius); background: var(--surface-alt); border: 1px solid var(--border); color: var(--text); transition: var(--transition);"
+              >
+                <option value="">Select a topic...</option>
+                <option value="registration">Registration & Pricing</option>
+                <option value="paper-submission">Paper Submission</option>
+                <option value="sponsorship">Sponsorship Opportunities</option>
+                <option value="venue">Venue & Travel</option>
+                <option value="technical">Technical Issues</option>
+                <option value="media">Media Partnerships</option>
+                <option value="general">General Inquiry</option>
+              </select>
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+              <label for="msg" class="text-muted" style="font-weight: 600; font-size: 0.9rem;">Message *</label>
+              <textarea 
+                id="msg" 
+                name="message" 
+                rows="5" 
+                required 
+                placeholder="Tell us how we can help you..." 
+                style="margin-top: 6px; width: 100%; padding: 12px 14px; border-radius: var(--radius); background: var(--surface-alt); border: 1px solid var(--border); color: var(--text); resize: vertical; transition: var(--transition);"
+              ></textarea>
+            </div>
+            
+            <button class="btn btn-primary" type="submit" style="width: 100%;">
+              Send Message
+            </button>
+            
+            <p class="text-muted" style="font-size: 0.8rem; margin-top: 0.75rem; text-align: center;">
+              We typically respond within 24 hours during business days.
+            </p>
+          </form>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="card">
+          <h3>Contact Information</h3>
+          
+          <!-- Primary Contact -->
+          <div style="margin-bottom: 2rem;">
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--primary);">📧 Primary Contact</h4>
+            <div class="text-muted" style="line-height: 1.8;">
+              <strong>Email:</strong> 
+              <a href="mailto:ic-cigai@sandipuniversity.edu.in" style="color: var(--primary); text-decoration: none;">
+                ic-cigai@sandipuniversity.edu.in
+              </a><br>
+              <strong>Response Time:</strong> Within 24 hours<br>
+              <strong>For:</strong> General inquiries, registration, submissions
             </div>
           </div>
           
-          <!-- Quick Links -->
-          <div class="footer-section">
-            <h4>Conference</h4>
-            <ul class="footer-links">
-              <li><a href="#about">About IC-CIGAI</a></li>
-              <li><a href="#tracks">Conference Tracks</a></li>
-              <li><a href="#speakers">Keynote Speakers</a></li>
-              <li><a href="#schedule">Program Schedule</a></li>
-              <li><a href="#cfp">Call for Papers</a></li>
-            </ul>
+          <!-- Phone Support -->
+          <div style="margin-bottom: 2rem;">
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--primary);">📞 Phone Support</h4>
+            <div class="text-muted" style="line-height: 1.8;">
+              <strong>Office:</strong> +91-2550-304999<br>
+              <strong>WhatsApp:</strong> +91-9876543210<br>
+              <strong>Hours:</strong> 9:00 AM - 6:00 PM IST (Mon-Fri)<br>
+              <strong>For:</strong> Urgent queries, travel assistance
+            </div>
           </div>
           
-          <!-- Resources -->
-          <div class="footer-section">
-            <h4>Resources</h4>
-            <ul class="footer-links">
-              <li><a href="#venue">Venue & Travel</a></li>
-              <li><a href="#sponsors">Sponsors & Partners</a></li>
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="#">Author Guidelines</a></li>
-              <li><a href="#">Presentation Tips</a></li>
-            </ul>
+          <!-- Organizing Committee -->
+          <div style="margin-bottom: 2rem;">
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--primary);">👥 Organizing Committee</h4>
+            <div class="text-muted" style="line-height: 1.8;">
+              <strong>Conference Chair:</strong> Dr. Rajendra Shinde<br>
+              <strong>Program Chair:</strong> Dr. Priya Deshmukh<br>
+              <strong>Sponsorship Chair:</strong> Prof. Amit Kumar<br>
+              <strong>Local Arrangements:</strong> Dr. Neha Joshi
+            </div>
           </div>
           
-          <!-- Newsletter -->
-          <div class="newsletter">
-            <h4>Stay Updated</h4>
-            <p>Get the latest updates about IC-CIGAI 2025, including speaker announcements and program details.</p>
-            <form class="newsletter-form" onsubmit="event.preventDefault(); announce('Subscribed! Welcome to IC-CIGAI updates.'); this.reset();">
-              <input type="email" placeholder="Enter your email" required aria-label="Email for newsletter">
-              <button type="submit" class="btn btn-primary">
-                <span>Subscribe</span>
-              </button>
-            </form>
+          <!-- Office Address -->
+          <div style="margin-bottom: 2rem;">
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--primary);">🏢 Office Address</h4>
+            <div class="text-muted" style="line-height: 1.8;">
+              <strong>School of Computer Science & Engineering</strong><br>
+              Sandip University<br>
+              Trimbak Road, Mahiravani<br>
+              Nashik - 422213, Maharashtra, India
+            </div>
+          </div>
+          
+          <!-- Social Media -->
+          <div>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--primary);">🌐 Follow Us</h4>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+                🐦 Twitter
+              </a>
+              <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+                💼 LinkedIn
+              </a>
+              <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+                📸 Instagram
+              </a>
+              <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+                📺 YouTube
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Specific Contact Categories -->
+      <div class="grid grid-3 mt-4">
+        <div class="card">
+          <h3>📝 Paper Submissions</h3>
+          <p class="text-muted mt-2">For questions about paper submission, review process, camera-ready preparation, and publication.</p>
+          <div class="mt-3">
+            <strong>Email:</strong> <a href="mailto:papers@ic-cigai.org" style="color: var(--primary); text-decoration: none;">papers@ic-cigai.org</a><br>
+            <strong>Program Chair:</strong> Dr. Priya Deshmukh
           </div>
         </div>
         
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-          <div class="copy">
-            © 2025 IC‑CIGAI • School of Computer Science & Engineering, Sandip University • 
-            <a href="#">Privacy Policy</a> • 
-            <a href="#">Terms of Service</a> • 
-            <a href="#">Code of Conduct</a>
+        <div class="card">
+          <h3>🤝 Sponsorship & Partnerships</h3>
+          <p class="text-muted mt-2">Interested in sponsoring or partnering with IC-CIGAI 2025? Let's discuss opportunities.</p>
+          <div class="mt-3">
+            <strong>Email:</strong> <a href="mailto:sponsors@ic-cigai.org" style="color: var(--primary); text-decoration: none;">sponsors@ic-cigai.org</a><br>
+            <strong>Sponsorship Chair:</strong> Prof. Amit Kumar
           </div>
-          <nav class="footer-nav" aria-label="Footer navigation">
-            <a href="#register">Register</a>
-            <a href="#contact">Contact</a>
-            <a href="#">Media Kit</a>
-            <a href="#">Accessibility</a>
-          </nav>
+        </div>
+        
+        <div class="card">
+          <h3>📰 Media & Press</h3>
+          <p class="text-muted mt-2">Media inquiries, press releases, interview requests, and coverage opportunities.</p>
+          <div class="mt-3">
+            <strong>Email:</strong> <a href="mailto:media@ic-cigai.org" style="color: var(--primary); text-decoration: none;">media@ic-cigai.org</a><br>
+            <strong>Media Contact:</strong> Ms. Sneha Pathak
+          </div>
+        </div>
+      </div>
+      
+      <!-- Emergency Contact -->
+      <div class="card mt-4" style="background: linear-gradient(135deg, rgba(30, 64, 175, 0.1), rgba(6, 182, 212, 0.1)); border: 1px solid var(--primary);">
+        <h3>🚨 Conference Day Emergency Contact</h3>
+        <div class="grid grid-2" style="gap: 2rem; margin-top: 1rem;">
+          <div>
+            <p class="text-muted">For urgent matters on September 13, 2025:</p>
+            <div style="margin-top: 0.75rem;">
+              <strong>Emergency Hotline:</strong> +91-9876543210<br>
+              <strong>On-site Coordinator:</strong> Dr. Neha Joshi<br>
+              <strong>Available:</strong> 8:00 AM - 8:00 PM
+            </div>
+          </div>
+          <div>
+            <p class="text-muted">For venue-related issues:</p>
+            <div style="margin-top: 0.75rem;">
+              <strong>Venue Support:</strong> +91-2550-304999<br>
+              <strong>Security:</strong> Campus Security Desk<br>
+              <strong>Medical:</strong> Campus Health Center
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--surface-alt); border-top: 1px solid var(--border); padding: 3rem 0 1.5rem 0;">
+    <div class="container">
+      <div class="grid grid-3" style="margin-bottom: 2rem;">
+        <!-- Conference Info -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <div class="logo-badge" style="width: 32px; height: 32px; font-size: 0.875rem;">IC</div>
+            <div>
+              <div style="font-weight: 700; font-size: 1.125rem;">IC-CIGAI 2025</div>
+              <div class="text-muted" style="font-size: 0.875rem;">September 13, 2025</div>
+            </div>
+          </div>
+          <p class="text-muted" style="font-size: 0.9rem; line-height: 1.6;">
+            International Conference on Computational Intelligence & Generative AI at Sandip University, Nashik.
+          </p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h4 style="font-weight: 600; margin-bottom: 1rem; font-size: 1rem;">Quick Links</h4>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 0.5rem;"><a href="#about" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-muted)'">About Conference</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="#tracks" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-muted)'">Research Tracks</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="#speakers" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-muted)'">Speakers</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="#schedule" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-muted)'">Program</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="#register" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-muted)'">Registration</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div>
+          <h4 style="font-weight: 600; margin-bottom: 1rem; font-size: 1rem;">Contact</h4>
+          <div style="font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
+            <div><strong>Email:</strong> ic-cigai@sandipuniversity.edu.in</div>
+            <div><strong>Phone:</strong> +91-00000-00000</div>
+            <div><strong>Venue:</strong> Sandip University, Nashik</div>
+            <div style="margin-top: 1rem;">
+              <a href="#" style="color: var(--primary); text-decoration: none; margin-right: 1rem;">LinkedIn</a>
+              <a href="#" style="color: var(--primary); text-decoration: none; margin-right: 1rem;">Twitter</a>
+              <a href="#" style="color: var(--primary); text-decoration: none;">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div style="border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div class="text-muted" style="font-size: 0.875rem;">
+          © 2025 IC-CIGAI. All rights reserved. | 
+          <a href="#" style="color: var(--primary); text-decoration: none;">Privacy Policy</a> | 
+          <a href="#" style="color: var(--primary); text-decoration: none;">Terms of Service</a>
+        </div>
+        <div class="text-muted" style="font-size: 0.875rem;">
+          Organized by School of Computer Science & Engineering, Sandip University
         </div>
       </div>
     </div>
   </footer>
 
   <script>
-    // Mobile Navigation Popup
+    // Mobile Navigation
     function toggleMobileMenu() {
       const toggle = document.querySelector('.mobile-toggle');
       const mobileNav = document.getElementById('mobileNav');
@@ -2020,12 +3160,6 @@
       mobileNav.classList.add('active');
       mobileNav.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
-      
-      // Focus close button for accessibility
-      setTimeout(() => {
-        const closeBtn = mobileNav.querySelector('.close-nav-btn');
-        if (closeBtn) closeBtn.focus();
-      }, 100);
     }
     
     function closeMobileMenu() {
@@ -2039,194 +3173,79 @@
       document.body.style.overflow = '';
     }
     
-    // Enhanced Navbar Scroll Effect
-    let lastScrollY = 0;
-    const navbar = document.getElementById('navbar');
-    
+    // Navbar scroll effect
     function handleNavbarScroll() {
-      const currentScrollY = window.scrollY;
-      
-      if (currentScrollY > 50) {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
-      
-      lastScrollY = currentScrollY;
     }
     
     window.addEventListener('scroll', handleNavbarScroll, { passive: true });
     
-    // Accessibility announcements
-    function announce(msg){
-      let live = document.getElementById('aria-live');
-      if(!live){
-        live = document.createElement('div');
-        live.id='aria-live'; 
-        live.setAttribute('role','status'); 
-        live.setAttribute('aria-live','polite');
-        live.style.position='fixed'; 
-        live.style.inset='auto auto 10px 10px'; 
-        live.style.padding='12px 16px';
-        live.style.background='rgba(11,15,26,.95)'; 
-        live.style.border='1px solid rgba(148,163,184,.25)'; 
-        live.style.borderRadius='12px';
-        live.style.color='var(--text)'; 
-        live.style.zIndex='9999'; 
-        live.style.boxShadow='var(--shadow-lg)';
-        live.style.backdropFilter='blur(20px)';
-        live.style.fontSize='14px';
-        live.style.fontWeight='600';
-        document.body.appendChild(live);
-      }
-      live.textContent = msg; 
-      setTimeout(()=> live.remove(), 3000);
-    }
-
-    // Enhanced IntersectionObserver for scroll reveal
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e => { 
-        if(e.isIntersecting){ 
-          e.target.classList.add('in-view'); 
-          io.unobserve(e.target);
-        } 
-      });
-    }, observerOptions);
-    
-    // Observe elements when DOM is ready
+    // Smooth scrolling for anchor links
     document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
-    });
-
-    // Enhanced Magnetic hover for buttons
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.magnetic').forEach(el=>{
-        el.addEventListener('pointermove', (e)=>{
-          const rect = el.getBoundingClientRect();
-          const x = (e.clientX - rect.left) / rect.width * 100;
-          const y = (e.clientY - rect.top) / rect.height * 100;
-          el.style.setProperty('--x', x + '%');
-          el.style.setProperty('--y', y + '%');
-        });
-        
-        el.addEventListener('pointerleave', ()=>{
-          el.style.removeProperty('--x'); 
-          el.style.removeProperty('--y');
-        });
-      });
-    });
-
-    // Enhanced smooth anchor navigation with accessibility
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('a[href^="#"]').forEach(a=>{
-        a.addEventListener('click', (e)=>{
-          const id = a.getAttribute('href').slice(1);
-          const target = document.getElementById(id);
-          if(target){
-            e.preventDefault(); 
-            
-            // Close mobile menu if open
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href').slice(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            e.preventDefault();
             closeMobileMenu();
             
-            // Smooth scroll
-            target.scrollIntoView({
-              behavior:'smooth', 
-              block:'start'
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
             });
-            
-            // Focus management for accessibility
-            setTimeout(()=> {
-              target.setAttribute('tabindex','-1');
-              target.focus({preventScroll:true});
-            }, 600);
           }
         });
       });
     });
-
-    // Enhanced parallax on hero orbs with performance optimization
-    let ticking = false;
     
-    function updateParallax() {
-      const y = window.scrollY;
-      const orbs = document.querySelectorAll('.orb');
+    // Form submission feedback
+    function announce(message) {
+      const notification = document.createElement('div');
+      notification.textContent = message;
+      notification.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: var(--primary);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-lg);
+        z-index: 9999;
+        font-weight: 600;
+      `;
       
-      orbs.forEach((o, i) => {
-        const speed = i === 0 ? 0.15 : 0.1;
-        const translateY = y * speed;
-        o.style.transform = `translateY(${translateY}px)`;
-      });
-      
-      ticking = false;
+      document.body.appendChild(notification);
+      setTimeout(() => notification.remove(), 3000);
     }
     
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(updateParallax);
-        ticking = true;
-      }
-    }, { passive: true });
-    
-    // Keyboard navigation for mobile menu popup
+    // Keyboard navigation for mobile menu
     document.addEventListener('keydown', (e) => {
       const mobileNav = document.getElementById('mobileNav');
       
-      if (mobileNav.classList.contains('active')) {
-        if (e.key === 'Escape') {
-          closeMobileMenu();
-        }
-        
-        if (e.key === 'Tab') {
-          const focusableElements = mobileNav.querySelectorAll('.close-nav-btn, .mobile-nav-links a');
-          const firstElement = focusableElements[0];
-          const lastElement = focusableElements[focusableElements.length - 1];
-          
-          if (e.shiftKey && document.activeElement === firstElement) {
-            e.preventDefault();
-            lastElement.focus();
-          } else if (!e.shiftKey && document.activeElement === lastElement) {
-            e.preventDefault();
-            firstElement.focus();
-          }
-        }
-      }
-    });
-    
-    // Close popup when clicking outside
-    document.addEventListener('click', (e) => {
-      const mobileNav = document.getElementById('mobileNav');
-      const mobileNavContent = document.querySelector('.mobile-nav-content');
-      
-      if (mobileNav.classList.contains('active') && 
-          !mobileNavContent.contains(e.target) && 
-          !document.querySelector('.mobile-toggle').contains(e.target)) {
+      if (mobileNav.classList.contains('active') && e.key === 'Escape') {
         closeMobileMenu();
       }
     });
     
-    // Performance optimization: Reduce animations on low-end devices
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
-    if (prefersReducedMotion.matches) {
-      document.documentElement.style.setProperty('--animation-duration', '0.01ms');
-    }
-    
-    // Initialize reveal animations when content loads
-    window.addEventListener('load', () => {
-      // Small delay to ensure smooth initial render
-      setTimeout(() => {
-        document.querySelectorAll('.reveal:not(.in-view)').forEach(el => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-            el.classList.add('in-view');
-          }
-        });
-      }, 100);
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const mobileNav = document.getElementById('mobileNav');
+      const mobileNavContent = document.querySelector('.mobile-nav-content');
+      const mobileToggle = document.querySelector('.mobile-toggle');
+      
+      if (mobileNav.classList.contains('active') && 
+          !mobileNavContent.contains(e.target) && 
+          !mobileToggle.contains(e.target)) {
+        closeMobileMenu();
+      }
     });
   </script>
 </body>
