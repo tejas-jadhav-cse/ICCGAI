@@ -7448,14 +7448,10 @@
           timestamp: new Date()
         });
       }
-
-      // Cleanup intervals on page unload
-      window.addEventListener('beforeunload', () => {
-        if (countdownInterval) clearInterval(countdownInterval);
-      });
-    });
-
-    // Optimized keyboard event handling with delegation
+      
+      // Note: Intervals are automatically cleared when the page unloads
+      // No need for beforeunload event listener which can cause permissions policy violations
+    });    // Optimized keyboard event handling with delegation
     document.addEventListener('keydown', (e) => {
       switch (e.key) {
         case 'Escape':
