@@ -611,15 +611,15 @@
     }
 
     .grid-2 {
-      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+      grid-template-columns: 1fr;
     }
 
     .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+      grid-template-columns: 1fr;
     }
 
     .grid-4 {
-      grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+      grid-template-columns: 1fr;
     }
 
     /* Section Layout */
@@ -648,17 +648,17 @@
     /* Hero Layout */
     .hero {
       background: linear-gradient(135deg, var(--surface) 0%, #f1f5f9 100%);
-      padding: var(--section-padding-desktop) 0;
+      padding: var(--section-padding-mobile) 0;
       position: relative;
-      min-height: 70vh;
+      min-height: 60vh;
       display: flex;
       align-items: center;
     }
 
     .hero-inner {
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 3rem;
+      grid-template-columns: 1fr;
+      gap: 2rem;
       align-items: center;
       width: 100%;
     }
@@ -1482,7 +1482,7 @@
       }
     }
 
-    /* Tablet and Small Desktop - Minimal hamburger menu */
+    /* Tablet and Small Desktop - Enhanced Layout */
     @media (min-width: 481px) and (max-width: 768px) {
       .mobile-toggle {
         display: flex;
@@ -1491,9 +1491,37 @@
       .nav-menu {
         display: none;
       }
+      
+      .hero {
+        padding: 4rem 0;
+        text-align: center;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      
+      .hero h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+      }
+      
+      .hero p {
+        font-size: 1.125rem;
+        max-width: 90%;
+        margin: 0 auto 2rem;
+      }
 
       .grid-2 {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       /* Optimize hamburger menu for tablet */
@@ -1510,12 +1538,175 @@
 
     /* Desktop and Larger */
     @media (min-width: 769px) {
+      :root {
+        --container-max: 1200px;
+        --padding: 24px;
+        --gap: 24px;
+        --section-padding-desktop: clamp(4rem, 8vw, 8rem);
+      }
+      
       .mobile-toggle {
         display: none;
       }
 
       .nav-menu {
         display: flex;
+      }
+      
+      /* Enhanced Desktop Navigation */
+      .nav-inner {
+        padding: 1rem 2rem;
+        min-height: 80px;
+      }
+      
+      .logo {
+        font-size: 1.125rem;
+      }
+      
+      .logo-badge {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+      }
+      
+      /* Hero Section Desktop Layout */
+      .hero {
+        padding: clamp(6rem, 12vw, 10rem) 0;
+        text-align: left;
+        min-height: 85vh;
+        display: flex;
+        align-items: center;
+      }
+      
+      .hero-inner {
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: clamp(3rem, 6vw, 6rem);
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .hero h1 {
+        font-size: clamp(3rem, 5vw, 4.5rem);
+        line-height: 1.1;
+        margin-bottom: 2rem;
+      }
+      
+      .hero p {
+        font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+        line-height: 1.6;
+        margin-bottom: 2.5rem;
+        max-width: 90%;
+      }
+      
+      .hero-cta {
+        flex-direction: row;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+      }
+      
+      .btn {
+        width: auto;
+        min-width: 160px;
+        padding: 18px 32px;
+        font-size: 1.125rem;
+      }
+      
+      .meta {
+        flex-direction: row;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        text-align: left;
+        font-size: 1rem;
+      }
+      
+      .hero-card {
+        padding: 2.5rem;
+        max-width: none;
+        min-width: 380px;
+      }
+      
+      /* Grid Systems for Desktop */
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+      
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      
+      .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+      
+      /* Section Spacing */
+      .section {
+        padding: var(--section-padding-desktop) 0;
+      }
+      
+      .section-header {
+        margin-bottom: 4rem;
+      }
+      
+      .container {
+        width: min(100% - 4rem, var(--container-max));
+        padding: 0;
+      }
+      
+      /* Card Enhancements */
+      .card {
+        padding: 2rem;
+        transition: all 0.3s ease;
+      }
+      
+      .card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 25px 50px rgba(29, 78, 216, 0.15);
+      }
+    }
+
+    /* Large Desktop and Ultra-wide Screens */
+    @media (min-width: 1200px) {
+      :root {
+        --container-max: 1400px;
+        --section-padding-desktop: clamp(6rem, 10vw, 12rem);
+      }
+      
+      .hero {
+        padding: clamp(8rem, 15vw, 12rem) 0;
+      }
+      
+      .hero-inner {
+        gap: clamp(4rem, 8vw, 8rem);
+      }
+      
+      .hero h1 {
+        font-size: clamp(3.5rem, 6vw, 5rem);
+      }
+      
+      .hero p {
+        font-size: 1.5rem;
+        max-width: 85%;
+      }
+      
+      .hero-card {
+        padding: 3rem;
+        min-width: 420px;
+      }
+      
+      .btn {
+        padding: 20px 40px;
+        font-size: 1.25rem;
+      }
+      
+      .section-header {
+        margin-bottom: 5rem;
+      }
+      
+      .card {
+        padding: 2.5rem;
       }
     }
 
