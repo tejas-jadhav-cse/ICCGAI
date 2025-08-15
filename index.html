@@ -220,7 +220,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
       border-radius: inherit;
     }
 
@@ -991,6 +991,17 @@
       background: var(--primary-alpha);
       color: var(--primary);
       border: 1px solid var(--primary);
+      white-space: nowrap;
+      font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+      padding: clamp(0.375rem, 1vw, 0.5rem) clamp(0.75rem, 2vw, 1rem);
+      transition: all 0.25s ease;
+    }
+
+    .pill:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
     }
 
     .eyebrow {
@@ -1082,7 +1093,7 @@
       grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
     }
 
-  /* ============================================
+    /* ============================================
      5. NAVIGATION COMPONENTS (Minimal & Clean)
      ============================================ */
 
@@ -1168,7 +1179,9 @@
     }
 
     /* Disable decorative underline */
-    .nav-menu a::after { display: none !important; }
+    .nav-menu a::after {
+      display: none !important;
+    }
 
     /* Register CTA (subtle pill) */
     .nav-menu a[href="#register"] {
@@ -1279,8 +1292,8 @@
       width: 100%;
       max-width: 380px;
       position: relative;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 
-                  0 0 0 1px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
       margin: 1rem;
       box-sizing: border-box;
       border: 1px solid rgba(226, 232, 240, 0.8);
@@ -1605,6 +1618,31 @@
         font-size: 15px;
         min-height: 44px;
       }
+
+      /* Ultra-responsive meta section for small screens */
+      .meta {
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 1rem 0;
+      }
+
+      .meta-item {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+        min-height: 45px;
+        min-width: 200px;
+        text-align: center;
+      }
+
+      .meta-item span:first-child {
+        font-size: 0.9rem;
+      }
+
+      .pill {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
+        margin: 0.125rem;
+      }
     }
 
     /* Tablet and Small Desktop - Balanced Layout */
@@ -1614,7 +1652,7 @@
         --padding: 20px;
         --section-padding-mobile: clamp(3rem, 6vw, 4rem);
       }
-      
+
       .mobile-toggle {
         display: flex;
       }
@@ -1622,12 +1660,12 @@
       .nav-menu {
         display: none;
       }
-      
+
       .nav-inner {
         padding: 1rem 1.5rem;
         min-height: 68px;
       }
-      
+
       .hero {
         padding: clamp(4rem, 8vw, 6rem) 0;
         text-align: center;
@@ -1639,43 +1677,57 @@
         gap: 2rem;
         padding: 0 1.5rem;
       }
-      
+
       .hero h1 {
         font-size: clamp(2.25rem, 5vw, 3rem);
         margin-bottom: 1.5rem;
       }
-      
+
       .hero p {
         font-size: 1.125rem;
         max-width: 85%;
         margin: 0 auto 1.75rem;
         line-height: 1.6;
       }
-      
+
       .hero-cta {
         gap: 1rem;
         justify-content: center;
         margin-bottom: 2rem;
       }
-      
+
       .btn {
         min-width: 140px;
         padding: 16px 24px;
         font-size: 1.0625rem;
       }
-      
+
       .meta {
         justify-content: center;
         flex-wrap: wrap;
-        gap: 1rem;
-        font-size: 0.9375rem;
-      }
-      
-      .meta-item {
-        padding: 0.625rem 1rem;
+        gap: 0.75rem;
         font-size: 0.875rem;
+        margin: 1rem 0;
       }
-      
+
+      .meta-item {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+        min-height: 50px;
+        flex: 1;
+        min-width: 250px;
+        text-align: center;
+      }
+
+      .meta-item span:first-child {
+        font-size: 1rem;
+      }
+
+      .pill {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.75rem;
+      }
+
       .hero-card {
         padding: 2rem;
         margin: 0 auto;
@@ -1685,20 +1737,20 @@
       .container {
         width: min(100% - 3rem, var(--container-max));
       }
-      
+
       .section {
         padding: var(--section-padding-mobile) 0;
       }
-      
+
       .section-header {
         margin-bottom: 2.75rem;
       }
-      
+
       .section-header h2 {
         font-size: clamp(1.875rem, 4vw, 2.5rem);
         margin-bottom: 1rem;
       }
-      
+
       .section-header p {
         font-size: 1.0625rem;
       }
@@ -1706,27 +1758,27 @@
       .grid {
         gap: 1.5rem;
       }
-      
+
       .grid-2 {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
       }
-      
+
       .grid-3 {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
       }
-      
+
       .grid-4 {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
       }
-      
+
       .card {
         padding: 1.75rem;
         border-radius: 12px;
       }
-      
+
       .card:hover {
         transform: translateY(-4px);
         box-shadow: 0 12px 24px rgba(29, 78, 216, 0.12);
@@ -1763,8 +1815,8 @@
         --space-5: 32px;
         --space-6: 40px;
       }
-      
-      
+
+
       .mobile-toggle {
         display: none;
       }
@@ -1772,7 +1824,7 @@
       .nav-menu {
         display: flex;
       }
-      
+
       /* Balanced Navigation */
       .nav {
         background: rgba(255, 255, 255, 0.95);
@@ -1780,30 +1832,30 @@
         border-bottom: 1px solid rgba(29, 78, 216, 0.08);
         box-shadow: 0 2px 16px rgba(29, 78, 216, 0.06);
       }
-      
+
       .nav-inner {
         padding: 1.25rem 2rem;
         min-height: 76px;
         max-width: var(--container-max);
         margin: 0 auto;
       }
-      
+
       .logo {
         font-size: 1.25rem;
         gap: 0.875rem;
       }
-      
+
       .logo-badge {
         width: 46px;
         height: 46px;
         font-size: 1.25rem;
         box-shadow: 0 3px 12px rgba(29, 78, 216, 0.25);
       }
-      
+
       .nav-menu {
         gap: 1.5rem;
       }
-      
+
       .nav-menu a {
         padding: 0.875rem 1.25rem;
         font-size: 1.0625rem;
@@ -1811,13 +1863,13 @@
         border-radius: 10px;
         transition: all 0.25s ease;
       }
-      
+
       .nav-menu a:hover {
         background: rgba(29, 78, 216, 0.06);
         transform: translateY(-1px);
         box-shadow: 0 4px 12px rgba(29, 78, 216, 0.1);
       }
-      
+
       /* Balanced Hero Section */
       .hero {
         padding: clamp(6rem, 10vw, 8rem) 0;
@@ -1825,14 +1877,14 @@
         min-height: 80vh;
         display: flex;
         align-items: center;
-        background: 
+        background:
           radial-gradient(circle at 25% 75%, rgba(29, 78, 216, 0.06) 0%, transparent 50%),
           radial-gradient(circle at 75% 25%, rgba(6, 182, 212, 0.04) 0%, transparent 50%),
           linear-gradient(135deg, var(--surface) 0%, #f8fafc 100%);
         position: relative;
         overflow: hidden;
       }
-      
+
       .hero::before {
         content: '';
         position: absolute;
@@ -1844,7 +1896,7 @@
         opacity: 0.3;
         pointer-events: none;
       }
-      
+
       .hero-inner {
         grid-template-columns: 1.2fr 0.8fr;
         gap: clamp(3rem, 5vw, 5rem);
@@ -1855,7 +1907,7 @@
         z-index: 1;
         padding: 0 2rem;
       }
-      
+
       .hero h1 {
         font-size: clamp(2.75rem, 4.5vw, 4rem);
         line-height: 1.1;
@@ -1863,7 +1915,7 @@
         letter-spacing: -0.015em;
         font-weight: 700;
       }
-      
+
       .hero .highlight {
         background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
         -webkit-background-clip: text;
@@ -1871,7 +1923,7 @@
         color: transparent;
         position: relative;
       }
-      
+
       .hero .highlight::after {
         content: '';
         position: absolute;
@@ -1883,7 +1935,7 @@
         border-radius: 2px;
         opacity: 0.5;
       }
-      
+
       .eyebrow {
         font-size: 0.9375rem;
         margin-bottom: 1.25rem;
@@ -1895,7 +1947,7 @@
         align-items: center;
         gap: 0.625rem;
       }
-      
+
       .eyebrow::before {
         content: '';
         width: 32px;
@@ -1903,7 +1955,7 @@
         background: linear-gradient(90deg, var(--primary), var(--accent));
         border-radius: 1px;
       }
-      
+
       .hero p {
         font-size: clamp(1.125rem, 1.5vw, 1.25rem);
         line-height: 1.65;
@@ -1912,13 +1964,13 @@
         color: var(--text-muted);
         font-weight: 400;
       }
-      
+
       .hero-cta {
         flex-direction: row;
         gap: 1.25rem;
         margin-bottom: 2rem;
       }
-      
+
       .btn {
         width: auto;
         min-width: 160px;
@@ -1929,19 +1981,19 @@
         transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 0 3px 12px rgba(29, 78, 216, 0.15);
       }
-      
+
       .btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 8px 24px rgba(29, 78, 216, 0.25);
       }
-      
+
       .btn-primary {
         background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%);
         border: none;
         position: relative;
         overflow: hidden;
       }
-      
+
       .btn-primary::before {
         content: '';
         position: absolute;
@@ -1949,59 +2001,64 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
         transition: left 0.5s;
       }
-      
+
       .btn-primary:hover::before {
         left: 100%;
       }
-      
+
       .btn-outline {
         background: rgba(255, 255, 255, 0.85);
         color: var(--primary);
         border: 2px solid var(--primary);
         backdrop-filter: blur(8px);
       }
-      
+
       .btn-outline:hover {
         background: var(--primary);
         color: white;
         border-color: var(--primary);
       }
-      
+
       .meta {
         flex-direction: row;
-        gap: 1.75rem;
+        gap: 1.25rem;
         text-align: left;
         font-size: 1rem;
         margin-bottom: 1.5rem;
         flex-wrap: wrap;
+        justify-content: center;
       }
-      
+
       .meta-item {
         display: flex;
         align-items: center;
         gap: 0.625rem;
-        padding: 0.75rem 1.125rem;
+        padding: 0.875rem 1.25rem;
         background: rgba(255, 255, 255, 0.75);
         border-radius: 10px;
         border: 1px solid rgba(29, 78, 216, 0.08);
         backdrop-filter: blur(8px);
         transition: all 0.25s ease;
         font-size: 0.9375rem;
+        flex: 1;
+        min-width: 260px;
+        max-width: 320px;
+        min-height: 60px;
       }
-      
+
       .meta-item:hover {
         background: rgba(255, 255, 255, 0.9);
         transform: translateY(-1px);
         box-shadow: 0 4px 12px rgba(29, 78, 216, 0.08);
       }
-      
+
       .meta-item span:first-child {
         font-size: 1.125rem;
       }
-      
+
       .hero-card {
         padding: 2.25rem;
         max-width: none;
@@ -2014,7 +2071,7 @@
         position: relative;
         overflow: hidden;
       }
-      
+
       .hero-card::before {
         content: '';
         position: absolute;
@@ -2024,85 +2081,85 @@
         height: 3px;
         background: linear-gradient(90deg, var(--primary), var(--accent));
       }
-      
+
       .hero-card h3 {
         font-size: 1.5rem;
         margin-bottom: 0.875rem;
         color: var(--text);
       }
-      
+
       .hero-card .eyebrow {
         margin-bottom: 0.75rem;
         font-size: 0.8125rem;
       }
-      
+
       .hero-card .grid-3 {
         gap: 1rem;
         margin-bottom: 1.5rem;
       }
-      
-      .hero-card .grid-3 > div {
+
+      .hero-card .grid-3>div {
         padding: 1.125rem;
         border-radius: 10px;
         transition: all 0.25s ease;
         border: 1px solid var(--border);
       }
-      
-      .hero-card .grid-3 > div:hover {
+
+      .hero-card .grid-3>div:hover {
         transform: translateY(-2px);
         border-color: var(--primary);
         box-shadow: 0 6px 16px rgba(29, 78, 216, 0.1);
       }
-      
+
       /* Balanced Section Spacing */
       .section {
         padding: var(--section-padding-desktop) 0;
         position: relative;
       }
-      
+
       .section-header {
         margin-bottom: 3.5rem;
         max-width: 700px;
       }
-      
+
       .section-header h2 {
         font-size: clamp(2rem, 3.5vw, 2.75rem);
         margin-bottom: 1.25rem;
         line-height: 1.15;
       }
-      
+
       .section-header p {
         font-size: 1.125rem;
         line-height: 1.6;
         color: var(--text-muted);
       }
-      
+
       .container {
         width: min(100% - 4rem, var(--container-max));
         padding: 0;
         margin: 0 auto;
       }
-      
+
       /* Balanced Grid Systems */
       .grid {
         gap: 1.75rem;
       }
-      
+
       .grid-2 {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
       }
-      
+
       .grid-3 {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.75rem;
       }
-      
+
       .grid-4 {
         grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
       }
-      
+
       /* Balanced Card Design */
       .card {
         padding: 2rem;
@@ -2113,7 +2170,7 @@
         backdrop-filter: blur(8px);
         position: relative;
       }
-      
+
       .card::before {
         content: '';
         position: absolute;
@@ -2126,27 +2183,27 @@
         transition: transform 0.3s ease;
         border-radius: 14px 14px 0 0;
       }
-      
+
       .card:hover {
         transform: translateY(-6px);
         box-shadow: 0 16px 32px rgba(29, 78, 216, 0.15);
         border-color: rgba(29, 78, 216, 0.15);
       }
-      
+
       .card:hover::before {
         transform: scaleX(1);
       }
-      
+
       .card h3 {
         font-size: 1.375rem;
         margin-bottom: 1rem;
       }
-      
+
       .card p {
         font-size: 1.0625rem;
         line-height: 1.6;
       }
-      
+
       /* Balanced Pills and Tags */
       .pill {
         padding: 0.625rem 1.25rem;
@@ -2158,14 +2215,14 @@
         color: var(--primary);
         border: 1px solid rgba(29, 78, 216, 0.15);
       }
-      
+
       .pill:hover {
         background: var(--primary);
         color: white;
         transform: translateY(-1px);
         box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
       }
-      
+
       .tag {
         padding: 0.625rem 1rem;
         font-size: 0.875rem;
@@ -2175,7 +2232,7 @@
         border: 1px solid var(--border);
         transition: all 0.25s ease;
       }
-      
+
       .tag:hover {
         background: rgba(29, 78, 216, 0.08);
         border-color: var(--primary);
@@ -2191,154 +2248,201 @@
         --font-size-4xl: 3.25rem;
         --font-size-3xl: 2.5rem;
       }
-      
+
       .nav-inner {
         padding: 1.5rem 3rem;
         min-height: 84px;
       }
-      
+
       .hero {
         padding: clamp(7rem, 12vw, 10rem) 0;
         min-height: 85vh;
       }
-      
+
       .hero-inner {
         gap: clamp(4rem, 6vw, 6rem);
         padding: 0 3rem;
       }
-      
+
       .hero h1 {
         font-size: clamp(3.25rem, 5vw, 4.75rem);
         margin-bottom: 2.25rem;
       }
-      
+
       .hero p {
         font-size: 1.375rem;
         max-width: 88%;
         margin-bottom: 2.75rem;
       }
-      
+
       .hero-cta {
         gap: 1.75rem;
         margin-bottom: 2.75rem;
       }
-      
+
       .hero-card {
         padding: 2.75rem;
         min-width: 400px;
         border-radius: 18px;
       }
-      
+
+      /* Large screen meta styles */
+      .meta {
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .meta-item {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        min-height: 70px;
+      }
+
+      .meta-item span:first-child {
+        font-size: 1.5rem;
+      }
+
       .btn {
         padding: 20px 36px;
         font-size: 1.1875rem;
         border-radius: 13px;
         min-width: 170px;
       }
-      
+
       .meta {
         gap: 2.25rem;
       }
-      
+
       .meta-item {
         padding: 0.875rem 1.375rem;
         border-radius: 11px;
       }
-      
+
       .section-header {
         margin-bottom: 4.5rem;
       }
-      
+
       .section-header h2 {
         font-size: clamp(2.25rem, 4vw, 3.25rem);
         margin-bottom: 1.75rem;
       }
-      
+
       .section-header p {
         font-size: 1.1875rem;
       }
-      
+
       .container {
         width: min(100% - 6rem, var(--container-max));
       }
-      
+
       .grid {
         gap: 2.25rem;
       }
-      
+
       .grid-2 {
         gap: 2.75rem;
       }
-      
+
       .grid-3 {
         gap: 2.25rem;
       }
-      
+
       .card {
         padding: 2.25rem;
         border-radius: 16px;
       }
-      
+
       .card:hover {
         transform: translateY(-8px);
         box-shadow: 0 24px 48px rgba(29, 78, 216, 0.18);
       }
-      
+
       .card h3 {
         font-size: 1.4375rem;
         margin-bottom: 1.25rem;
       }
-      
+
       .card p {
         font-size: 1.125rem;
       }
-      
+
       .eyebrow::before {
         width: 48px;
         height: 3px;
       }
-      
+
       .pill {
         padding: 0.75rem 1.375rem;
         font-size: 1rem;
       }
-      
+
       .tag {
         padding: 0.75rem 1.125rem;
         font-size: 0.9375rem;
         border-radius: 9px;
       }
-      
+
       /* Refined Visual Effects for Large Screens */
       .hero::before {
         background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M 18 0 L 0 0 0 18" fill="none" stroke="%23e5e7eb" stroke-width="0.5" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
         opacity: 0.35;
       }
-      
+
       .hero .highlight::after {
         height: 4px;
         bottom: -6px;
       }
-      
+
       .nav {
         box-shadow: 0 4px 24px rgba(29, 78, 216, 0.08);
       }
-      
+
       .logo-badge {
         width: 50px;
         height: 50px;
         font-size: 1.3125rem;
         box-shadow: 0 4px 16px rgba(29, 78, 216, 0.3);
       }
-      
+
       .nav-menu a {
         font-size: 1.125rem;
         padding: 1rem 1.375rem;
         border-radius: 11px;
       }
-      
+
       .hero-card::before {
         height: 4px;
+      }
+    }
+
+    /* Ultra-wide Screens (1440px+) - Optimized for large displays */
+    @media (min-width: 1440px) {
+      :root {
+        --container-max: 1400px;
+      }
+
+      .meta {
+        gap: 2rem;
+        margin: 2.5rem 0;
+        justify-content: center;
+      }
+
+      .meta-item {
+        padding: 1.25rem 2rem;
+        font-size: 1.125rem;
+        min-height: 80px;
+        max-width: 400px;
+        border-radius: 12px;
+      }
+
+      .meta-item span:first-child {
+        font-size: 1.75rem;
+      }
+
+      .pill {
+        padding: 0.875rem 1.5rem;
+        font-size: 1.0625rem;
+        margin: 0.25rem;
       }
     }
 
@@ -2407,61 +2511,63 @@
       }
 
       .hero {
-        background: 
+        background:
           radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
           radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
           linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-surface) 100%);
       }
-      
+
       .hero-card {
         background: rgba(30, 41, 59, 0.95);
         border-color: rgba(59, 130, 246, 0.2);
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
       }
-      
+
       .meta-item {
         background: rgba(30, 41, 59, 0.8);
         border-color: rgba(59, 130, 246, 0.2);
       }
-      
+
       .meta-item:hover {
         background: rgba(30, 41, 59, 0.95);
         box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
       }
-      
+
       .btn-outline {
         background: rgba(30, 41, 59, 0.9);
         color: #60a5fa;
         border-color: #60a5fa;
       }
-      
+
       .btn-outline:hover {
         background: #60a5fa;
         color: var(--dark-bg);
       }
-      
+
       .pill {
         background: rgba(59, 130, 246, 0.15);
         color: #60a5fa;
         border-color: rgba(59, 130, 246, 0.3);
       }
-      
+
       .pill:hover {
         background: #60a5fa;
         color: var(--dark-bg);
       }
-      
+
       .tag {
         background: rgba(30, 41, 59, 0.8);
         border-color: var(--dark-border);
         color: var(--dark-text);
       }
-      
+
       .tag:hover {
         background: rgba(59, 130, 246, 0.15);
         border-color: #60a5fa;
       }
-    }    /* Reduced Motion Support */
+    }
+
+    /* Reduced Motion Support */
     @media (prefers-reduced-motion: reduce) {
       * {
         animation-duration: 0.01ms !important;
@@ -2954,17 +3060,40 @@
 
     .meta {
       display: flex;
-      gap: clamp(1rem, 3vw, 2rem);
+      gap: clamp(0.75rem, 2vw, 1.5rem);
       flex-wrap: wrap;
       color: var(--text-muted);
       font-weight: 500;
-      margin-bottom: 1.5rem;
+      margin: 1.5rem 0;
+      justify-content: center;
+      /* Grid fallback for modern browsers */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: clamp(0.75rem, 2vw, 1.5rem);
+    }
+
+    /* Flexbox fallback for older browsers */
+    .no-grid .meta {
+      display: flex;
     }
 
     .meta-item {
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: var(--surface-alt);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      min-height: 60px;
+      transition: all 0.25s ease;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .meta-item:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.1);
     }
 
     .meta-item strong {
@@ -3069,6 +3198,55 @@
       transform: translateY(-2px);
       box-shadow: var(--shadow-md);
       border-color: var(--border-hover);
+    }
+
+    /* CSS Feature Detection and Fallbacks */
+    @supports not (display: grid) {
+      .meta {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .meta-item {
+        flex: 1;
+        min-width: 200px;
+        max-width: 300px;
+      }
+    }
+
+    @supports (display: grid) {
+      .meta {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1rem;
+      }
+    }
+
+    /* Container Queries for ultra-modern responsive design */
+    @supports (container-type: inline-size) {
+      .hero-inner {
+        container-type: inline-size;
+      }
+
+      @container (max-width: 600px) {
+        .meta {
+          grid-template-columns: 1fr;
+          gap: 0.75rem;
+        }
+
+        .meta-item {
+          min-height: 50px;
+          font-size: 0.875rem;
+        }
+      }
+
+      @container (min-width: 900px) {
+        .meta {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.5rem;
+        }
+      }
     }
 
     /* Section Styling */
@@ -3193,6 +3371,48 @@
 
     .mb-4 {
       margin-bottom: 2rem;
+    }
+
+    /* Contact Section Enhancements */
+    #contact .grid-4 {
+      gap: clamp(1rem, 3vw, 1.5rem);
+    }
+
+    #contact .grid-4 .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 280px;
+    }
+
+    #contact .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #contact .card h3 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+      font-size: 1.1rem;
+      border-bottom: 2px solid var(--primary-alpha);
+      padding-bottom: 0.5rem;
+    }
+
+    #contact .card strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* Responsive adjustments for contact cards */
+    @media (max-width: 768px) {
+      #contact .grid-4 {
+        gap: 1rem;
+      }
+
+      #contact .grid-4 .card {
+        min-height: auto;
+      }
     }
 
     .tag {
@@ -6246,13 +6466,11 @@
           <li><a href="#about">About</a></li>
           <li><a href="#cfp">Call for Papers</a></li>
           <li><a href="#tracks">Tracks</a></li>
-          <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#schedule">Program</a></li>
+          <!-- <li><a href="#speakers">Speakers</a></li> -->
           <li><a href="#venue">Venue</a></li>
           <li><a href="#sponsors">Sponsors</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#register">Register</a></li>
         </ul>
       </nav>
 
@@ -6275,13 +6493,11 @@
           <a href="#about" onclick="closeMobileMenu()">About</a>
           <a href="#cfp" onclick="closeMobileMenu()">Call for Papers</a>
           <a href="#tracks" onclick="closeMobileMenu()">Tracks</a>
-          <a href="#speakers" onclick="closeMobileMenu()">Speakers</a>
-          <a href="#schedule" onclick="closeMobileMenu()">Program</a>
+          <!-- <a href="#speakers" onclick="closeMobileMenu()">Speakers</a> -->
           <a href="#venue" onclick="closeMobileMenu()">Venue</a>
           <a href="#sponsors" onclick="closeMobileMenu()">Sponsors</a>
           <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
           <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-          <a href="#register" onclick="closeMobileMenu()">Register</a>
         </div>
       </div>
     </div>
@@ -6296,37 +6512,14 @@
         <div>
           <div class="eyebrow">September 13, 2025 • Sandip University, Nashik</div>
           <h1>International Conference on <span class="highlight">Computational Intelligence</span> & Generative AI</h1>
-          <p>Join leading researchers, industry experts, and innovators in artificial intelligence and machine learning
-            for a premier academic conference featuring cutting-edge research, keynote presentations, and collaborative
-            discussions.</p>
+          <p>Join leading researchers, industry experts, and AI innovators for cutting-edge research, keynotes, and
+            collaboration.</p>
 
           <div class="hero-cta">
             <a href="#register" class="btn btn-primary">Register Now</a>
             <a href="#cfp" class="btn btn-outline">Submit Paper</a>
           </div>
 
-          <div class="meta">
-            <div class="meta-item">
-              <span>📍</span>
-              <span><strong>Sandip University</strong>, Nashik</span>
-            </div>
-            <div class="meta-item">
-              <span>📅</span>
-              <span><strong>September 13, 2025</strong></span>
-            </div>
-            <div class="meta-item">
-              <span>⏰</span>
-              <span><strong>9:00 AM – 6:30 PM IST</strong></span>
-            </div>
-          </div>
-
-          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem;">
-            <span class="pill">Keynote Speakers</span>
-            <span class="pill">Research Papers</span>
-            <span class="pill">Industry Panels</span>
-            <span class="pill">Networking</span>
-            <span class="pill">Workshops</span>
-          </div>
         </div>
 
         <div class="hero-card">
@@ -6366,6 +6559,33 @@
             <span class="tag">🏢 Industry</span>
             <span class="tag">🔬 Research</span>
           </div>
+        </div>
+
+        <div class="meta"
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+          <div class="meta-item"
+            style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: var(--surface-alt); border-radius: var(--radius); border: 1px solid var(--border); min-height: 60px;">
+            <span style="font-size: 1.25rem; flex-shrink: 0;">📍</span>
+            <span style="font-weight: 500; line-height: 1.4;"><strong>Sandip University</strong>, Nashik</span>
+          </div>
+          <div class="meta-item"
+            style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: var(--surface-alt); border-radius: var(--radius); border: 1px solid var(--border); min-height: 60px;">
+            <span style="font-size: 1.25rem; flex-shrink: 0;">📅</span>
+            <span style="font-weight: 500; line-height: 1.4;"><strong>September 13, 2025</strong></span>
+          </div>
+          <div class="meta-item"
+            style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: var(--surface-alt); border-radius: var(--radius); border: 1px solid var(--border); min-height: 60px;">
+            <span style="font-size: 1.25rem; flex-shrink: 0;">⏰</span>
+            <span style="font-weight: 500; line-height: 1.4;"><strong>9:00 AM – 6:30 PM IST</strong></span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; justify-content: center;">
+          <span class="pill" style="white-space: nowrap;">Keynote Speakers</span>
+          <span class="pill" style="white-space: nowrap;">Research Papers</span>
+          <span class="pill" style="white-space: nowrap;">Industry Panels</span>
+          <span class="pill" style="white-space: nowrap;">Networking</span>
+          <span class="pill" style="white-space: nowrap;">Workshops</span>
         </div>
       </div>
     </section>
@@ -7163,15 +7383,13 @@
             here to help you.</p>
         </div>
 
-        <div>
-          <!-- Contact Information -->
+        <!-- Contact Information Grid - 4 Equal Boxes -->
+        <div class="grid grid-4">
+          <!-- Primary Contact -->
           <div class="card">
-            <h3>Contact Information</h3>
-
-            <!-- Primary Contact -->
-            <div style="margin-bottom: 2rem;">
-              <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--primary);">📧 Primary Contact</h4>
-              <div class="text-muted" style="line-height: 1.8;">
+            <div class="card-body">
+              <h3>📧 Primary Contact</h3>
+              <div class="text-muted" style="line-height: 1.8; margin-top: 1rem;">
                 <strong>WhatsApp:</strong> +91-7219122480<br>
                 <strong>Email:</strong>
                 <a href="mailto:ic-cigai@sandipuniversity.edu.in" style="color: var(--primary); text-decoration: none;">
@@ -7181,73 +7399,62 @@
                 <strong>For:</strong> General inquiries, registration, submissions
               </div>
             </div>
+          </div>
 
-            <!-- Organizing Committee -->
-            <div style="margin-bottom: 2rem;">
-              <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--primary);">👥 Organizing Committee</h4>
-              <div class="text-muted" style="line-height: 1.8;">
+          <!-- Organizing Committee -->
+          <div class="card">
+            <div class="card-body">
+              <h3>👥 Organizing Committee</h3>
+              <div class="text-muted" style="line-height: 1.8; margin-top: 1rem;">
                 <strong>Conference Chair:</strong> Dr. Rajendra Shinde<br>
                 <strong>Program Chair:</strong> Dr. Priya Deshmukh<br>
                 <strong>Sponsorship Chair:</strong> Prof. Amit Kumar<br>
                 <strong>Local Arrangements:</strong> Dr. Neha Joshi
               </div>
             </div>
-
-            <!-- Office Address -->
-            <!-- <div style="margin-bottom: 2rem;">
-            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--primary);">🏢 Office Address</h4>
-            <div class="text-muted" style="line-height: 1.8;">
-              <strong>School of Computer Science & Engineering</strong><br>
-              Sandip University<br>
-              Trimbak Road, Mahiravani<br>
-              Nashik - 422213, Maharashtra, India
-            </div>
-          </div> -->
-
-
           </div>
-        </div>
 
-        <!-- Specific Contact Categories -->
-        <div class="grid grid-3 mt-4">
+          <!-- Paper Submissions -->
           <div class="card">
-            <h3>📝 Paper Submissions</h3>
-            <p class="text-muted mt-2">For questions about paper submission, review process, camera-ready preparation,
-              and publication.</p>
-            <div class="mt-3">
-              <strong>Review Chair:</strong>Dr. <br>
-              <strong>Review Team lead:</strong> Mr. Yash Rajole<br>
-              <strong>Contact:</strong> +91 70572 24328
+            <div class="card-body">
+              <h3>📝 Paper Submissions</h3>
+              <p class="text-muted" style="margin-top: 1rem; margin-bottom: 1rem;">For questions about paper submission,
+                review process, camera-ready preparation, and publication.</p>
+              <div class="text-muted" style="line-height: 1.8;">
+                <strong>Review Chair:</strong> Dr.<br>
+                <strong>Review Team lead:</strong> Mr. Yash Rajole<br>
+                <strong>Contact:</strong> +91 70572 24328
+              </div>
             </div>
           </div>
 
+          <!-- Sponsorship & Partnerships -->
           <div class="card">
-            <h3>🤝 Sponsorship & Partnerships</h3>
-            <p class="text-muted mt-2">Interested in sponsoring or partnering with IC-CIGAI 2025? Let's discuss
-              opportunities.</p>
-            <div class="mt-3">
-              <strong>Email:</strong> <a href="mailto:tejasjadhav.socse@sandipuniversity.edu.in"
-                style="color: var(--primary); text-decoration: none;">tejasjadhav.socse@sandipuniversity.edu.in</a><br>
-              <strong>Sponsorship Head:</strong> Mr. Tejas Jadhav<br>
-              <strong>Contact:</strong> +91 93560 16156
+            <div class="card-body">
+              <h3>🤝 Sponsorship & Partnerships</h3>
+              <p class="text-muted" style="margin-top: 1rem; margin-bottom: 1rem;">Interested in sponsoring or
+                partnering with IC-CIGAI 2025? Let's discuss opportunities.</p>
+              <div class="text-muted" style="line-height: 1.8;">
+                <strong>Email:</strong>
+                <a href="mailto:tejasjadhav.socse@sandipuniversity.edu.in"
+                  style="color: var(--primary); text-decoration: none;">
+                  tejasjadhav.socse@sandipuniversity.edu.in
+                </a><br>
+                <strong>Sponsorship Head:</strong> Mr. Tejas Jadhav<br>
+                <strong>Contact:</strong> +91 93560 16156
+              </div>
             </div>
           </div>
-
-          <!-- <div class="card">
-          <h3>📰 Media & Press</h3>
-          <p class="text-muted mt-2">Media inquiries, press releases, interview requests, and coverage opportunities.</p>
-          <div class="mt-3">
-            <strong>Email:</strong> <a href="mailto:media@ic-cigai.org" style="color: var(--primary); text-decoration: none;">media@ic-cigai.org</a><br>
-            <strong>Media Contact:</strong> Ms. Sneha Pathak
-          </div>
-        </div> -->
         </div>
 
         <!-- Emergency Contact -->
         <div class="card mt-4"
           style="background: linear-gradient(135deg, rgba(30, 64, 175, 0.1), rgba(6, 182, 212, 0.1)); border: 1px solid var(--primary);">
-          <h3>🚨 Conference Day Emergency Contact</h3>
-          <p class="text-muted">We'll Update before the conference.</p>
+          <div class="card-body">
+            <h3>🚨 Conference Day Emergency Contact</h3>
+            <p class="text-muted" style="margin-top: 1rem;">We'll update this section before the conference with
+              emergency contact details for the event day.</p>
+          </div>
           <!-- <div class="grid grid-2" style="gap: 2rem; margin-top: 1rem;">
           <div>
             <p class="text-muted">For urgent matters on September 13, 2025:</p>
